@@ -7,20 +7,28 @@ juzhou project
 1. 安装node js
 https://nodejs.org/dist/v16.16.0/win-x64/node.exe
 
-2. 通过打开文件夹的cmd， 输入\
-	node -v
-\查看node.js有没有装好
+2. 通过打开文件夹的cmd， 输入
+```
+node -v
+```
+查看node.js有没有装好
 
-3. 进入terminal，_Front内 安装npm后，输入\
-	npm yarn install
+3. 进入terminal，_Front内 安装npm后，输入
+```
+npm yarn install
+```
 
-4. 输入\
-	yarn install 
-\安装依赖
+4. 输入
+```
+yarn install 
+```
+安装依赖
 
-5. 输入\
-	yarn run dev -o 
-\直接打开， 或者点击端口http://localhost:3000/ 
+5. 输入
+```
+yarn run dev -o 
+```
+直接打开， 或者点击端口http://localhost:3000/ 
 
 
 后端文件
@@ -33,17 +41,20 @@ github 操作
 -------------
 需要在文档路径下的cmd打开
 
-1. 注释\
-	git commit -m "注释语句"
+1. 注释
+```
+git commit -m "注释语句"
+```
 
+2. 下载
+```
+git pull 
+```
 
-2. 下载\
-	git pull 
-
-
-3. 上传，上传的文件上传之前要commit\
-	git push 
-
+3. 上传，上传的文件上传之前要commit
+```
+git push 
+```
 
 Api接口文档地址
 -------------
