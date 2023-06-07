@@ -1,6 +1,7 @@
 # ai-project
 juzhou project
 
+前端安装
 
 1.安装node js
 
@@ -16,26 +17,16 @@ https://nodejs.org/dist/v16.16.0/win-x64/node.exe
 5输入yarn run dev -o 直接打开， 或者点击端口http://localhost:3000/ 
 
 
-上传本地文件到github
-
-第一步：建立git仓库，cd到你的本地项目根目录下，执行git命令 
+后端文件上传github
 
 
 git commit -m "注释语句"
-第二步：去github上创建自己的Repository，创建后的页面如下图所示：
+注释
 
-
-点击Clone or download按钮，复制弹出的地址git@github.com:***/test.git，记得要用SSH的地址，尽量不要用HTTPS的地址，如上图所示
-
-第三步：将本地的仓库关联到github上---把上一步复制的地址放到下面
-
-git remote add origin git@github.com:***/test.git
-
-第四步：上传github之前，要先pull一下，执行如下命令：
 
 git pull 
+下载
 
-第五步，上传代码到github远程仓库
 
 git push 
-祝你成功！
+上传，上传的文件上传之前要commit
