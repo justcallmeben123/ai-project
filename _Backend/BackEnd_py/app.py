@@ -4,6 +4,8 @@ from flask_restful import Api
 from flask_restful import Resource
 
 from modules.llm_modules import llm_api
+from modules.llm_modules import llm_access_token
+from modules.helper import response_generator
 
 app = Flask(__name__)
 CORS(app)
@@ -25,26 +27,51 @@ class Hello(Resource):
         return "[post] hello flask"
 
 
-user_response_dict = dict()
+llm_conversation = []
+
+class LLM_Access_Checker(Resource):
+    def get(self):
+        token = llm_access_token.get_llm_access_token(request.form['password'])
+        if token is None:
+            return response_generator.fail("password 无效")
+
+        return response_generator.ok({"token":token})
 
 class LLM_Caller(Resource):
-    def get(self,userid):
-        if userid not in user_response_dict:
-            return None
-        return user_response_dict[userid][-1]
+    def get(self):
+        if llm_access_token.check_llm_access_token(request.form['token']) is None:
+            return response_generator.fail("Token 无效")
+        id = int(request.form['id'])
+        if id>len(llm_conversation):
+            return response_generator.fail("无对话")
+        if id == 0 :
+            id = len(llm_conversation)
+        else:
+            id = id-1
 
-    def put(self,userid):
-        question = request.form['question']
-        if userid not in user_response_dict:
-            user_response_dict[userid] = []
-        user_response_dict[userid].append(llm_api.llm_asking(question))
-        return user_response_dict[userid][-1]
+        return response_generator.ok({"id":id+1, "conversation":llm_conversation[id]})
+
+    def post(self):
+        if llm_access_token.check_llm_access_token(request.form['token']) is None:
+            return response_generator.fail("Token 无效")
+        id = int(request.form['id'])
+        if id>len(llm_conversation):
+            return response_generator.fail("无对话")
+        if id == 0 :
+            id = len(llm_conversation)
+            llm_conversation.append([])
+        else:
+            id = id-1
+
+        text = request.form['text']
+        llm_conversation[id].append(llm_api.llm_asking(text))
+
+        return response_generator.ok({"id":id+1})
 
 
 api.add_resource(Hello, '/hello')
-
-
-api.add_resource(LLM_Caller, '/LLM_Caller/<string:userid>')
+api.add_resource(LLM_Caller, '/accllm')
+api.add_resource(LLM_Access_Checker, '/accllm/token')
 
 
 if __name__ == "__main__":
