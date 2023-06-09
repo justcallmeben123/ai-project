@@ -1,0 +1,137 @@
+2022-06-15 00:00:01,022 INFO 25782 [egg-logrotator] app logger reload: got log-reload message
+2022-06-24 15:27:58,928 INFO 5088 [egg:logger] init all loggers with options: {"dir":"/www/wwwroot/ceshi8.dishaxy.com/logs/edu-api","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"edu-api-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-06-24 15:27:58,957 INFO 5088 [egg-multipart] file mode enable
+2022-06-24 15:27:58,958 INFO 5088 [egg-multipart] will save temporary files to "/tmp/egg-multipart-tmp/edu-api", cleanup job cron: "0 30 4 * * *"
+2022-06-24 15:27:59,147 INFO 5088 [egg-redis] server connecting redis://:***@127.0.0.1:6379/2
+2022-06-24 15:27:59,681 INFO 5088 [egg-static] starting static serve /public/ -> /www/wwwroot/ceshi8.dishaxy.com/app/public
+2022-06-24 15:27:59,686 INFO 5088 [egg-security] use methodnoallow middleware
+2022-06-24 15:27:59,688 INFO 5088 [egg-security] use noopen middleware
+2022-06-24 15:27:59,690 INFO 5088 [egg-security] use nosniff middleware
+2022-06-24 15:27:59,691 INFO 5088 [egg-security] use xssProtection middleware
+2022-06-24 15:27:59,693 INFO 5088 [egg-security] use xframe middleware
+2022-06-24 15:27:59,695 INFO 5088 [egg-security] use dta middleware
+2022-06-24 15:27:59,695 INFO 5088 [egg-security] compose 6 middlewares into one security middleware
+2022-06-24 15:28:00,153 INFO 5088 [egg:core] dump config after load, 21ms
+2022-06-24 15:28:00,278 INFO 5088 [egg-redis] client connect success
+2022-06-24 15:28:00,303 INFO 5088 [egg-watcher:application] watcher start success
+2022-06-24 15:28:00,321 INFO 5088 [egg-redis] instance[0] status OK, client ready
+2022-06-24 15:28:00,333 INFO 5088 [egg:core] dump config after ready, 7ms
+2022-06-24 15:29:00,281 INFO 5162 [egg:logger] init all loggers with options: {"dir":"/www/wwwroot/ceshi8.dishaxy.com/logs/edu-api","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"edu-api-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-06-24 15:29:00,312 INFO 5162 [egg-multipart] file mode enable
+2022-06-24 15:29:00,312 INFO 5162 [egg-multipart] will save temporary files to "/tmp/egg-multipart-tmp/edu-api", cleanup job cron: "0 30 4 * * *"
+2022-06-24 15:29:00,504 INFO 5162 [egg-redis] server connecting redis://:***@127.0.0.1:6379/2
+2022-06-24 15:29:00,998 INFO 5162 [egg-static] starting static serve /public/ -> /www/wwwroot/ceshi8.dishaxy.com/app/public
+2022-06-24 15:29:01,023 INFO 5162 [egg-security] use methodnoallow middleware
+2022-06-24 15:29:01,032 INFO 5162 [egg-security] use noopen middleware
+2022-06-24 15:29:01,035 INFO 5162 [egg-security] use nosniff middleware
+2022-06-24 15:29:01,037 INFO 5162 [egg-security] use xssProtection middleware
+2022-06-24 15:29:01,040 INFO 5162 [egg-security] use xframe middleware
+2022-06-24 15:29:01,042 INFO 5162 [egg-security] use dta middleware
+2022-06-24 15:29:01,042 INFO 5162 [egg-security] compose 6 middlewares into one security middleware
+2022-06-24 15:29:01,806 INFO 5162 [egg:core] dump config after load, 23ms
+2022-06-24 15:29:01,950 INFO 5162 [egg-redis] client connect success
+2022-06-24 15:29:02,020 INFO 5162 [egg-redis] instance[0] status OK, client ready
+2022-06-24 15:29:02,033 INFO 5162 [egg-watcher:application] watcher start success
+2022-06-24 15:29:02,267 INFO 5162 [egg:core] dump config after ready, 81ms
+2022-06-24 15:29:59,414 INFO 5234 [egg:logger] init all loggers with options: {"dir":"/www/wwwroot/ceshi8.dishaxy.com/logs/edu-api","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"edu-api-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-06-24 15:29:59,461 INFO 5234 [egg-multipart] file mode enable
+2022-06-24 15:29:59,461 INFO 5234 [egg-multipart] will save temporary files to "/tmp/egg-multipart-tmp/edu-api", cleanup job cron: "0 30 4 * * *"
+2022-06-24 15:29:59,922 INFO 5234 [egg-redis] server connecting redis://:***@127.0.0.1:6379/2
+2022-06-24 15:30:00,288 INFO 5234 [egg-static] starting static serve /public/ -> /www/wwwroot/ceshi8.dishaxy.com/app/public
+2022-06-24 15:30:00,292 INFO 5234 [egg-security] use methodnoallow middleware
+2022-06-24 15:30:00,293 INFO 5234 [egg-security] use noopen middleware
+2022-06-24 15:30:00,295 INFO 5234 [egg-security] use nosniff middleware
+2022-06-24 15:30:00,297 INFO 5234 [egg-security] use xssProtection middleware
+2022-06-24 15:30:00,299 INFO 5234 [egg-security] use xframe middleware
+2022-06-24 15:30:00,301 INFO 5234 [egg-security] use dta middleware
+2022-06-24 15:30:00,301 INFO 5234 [egg-security] compose 6 middlewares into one security middleware
+2022-06-24 15:30:00,839 INFO 5234 [egg:core] dump config after load, 19ms
+2022-06-24 15:30:01,130 INFO 5234 [egg-redis] client connect success
+2022-06-24 15:30:01,368 INFO 5234 [egg-redis] instance[0] status OK, client ready
+2022-06-24 15:30:01,376 INFO 5234 [egg-watcher:application] watcher start success
+2022-06-24 15:30:01,404 INFO 5234 [egg:core] dump config after ready, 6ms
+2022-06-24 15:30:32,886 INFO 5297 [egg:logger] init all loggers with options: {"dir":"/www/wwwroot/ceshi8.dishaxy.com/logs/edu-api","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"edu-api-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-06-24 15:30:32,936 INFO 5297 [egg-multipart] file mode enable
+2022-06-24 15:30:32,936 INFO 5297 [egg-multipart] will save temporary files to "/tmp/egg-multipart-tmp/edu-api", cleanup job cron: "0 30 4 * * *"
+2022-06-24 15:30:33,397 INFO 5297 [egg-redis] server connecting redis://:***@127.0.0.1:6379/2
+2022-06-24 15:30:33,841 INFO 5297 [egg-static] starting static serve /public/ -> /www/wwwroot/ceshi8.dishaxy.com/app/public
+2022-06-24 15:30:33,846 INFO 5297 [egg-security] use methodnoallow middleware
+2022-06-24 15:30:33,847 INFO 5297 [egg-security] use noopen middleware
+2022-06-24 15:30:33,849 INFO 5297 [egg-security] use nosniff middleware
+2022-06-24 15:30:33,852 INFO 5297 [egg-security] use xssProtection middleware
+2022-06-24 15:30:33,853 INFO 5297 [egg-security] use xframe middleware
+2022-06-24 15:30:33,855 INFO 5297 [egg-security] use dta middleware
+2022-06-24 15:30:33,855 INFO 5297 [egg-security] compose 6 middlewares into one security middleware
+2022-06-24 15:30:34,326 INFO 5297 [egg:core] dump config after load, 20ms
+2022-06-24 15:30:34,550 INFO 5297 [egg-redis] client connect success
+2022-06-24 15:30:34,706 INFO 5297 [egg-redis] instance[0] status OK, client ready
+2022-06-24 15:30:34,714 INFO 5297 [egg-watcher:application] watcher start success
+2022-06-24 15:30:34,867 INFO 5297 [egg:core] dump config after ready, 81ms
+2022-06-24 15:31:00,677 INFO 5333 [egg:logger] init all loggers with options: {"dir":"/www/wwwroot/ceshi8.dishaxy.com/logs/edu-api","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"edu-api-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-06-24 15:31:00,720 INFO 5333 [egg-multipart] file mode enable
+2022-06-24 15:31:00,720 INFO 5333 [egg-multipart] will save temporary files to "/tmp/egg-multipart-tmp/edu-api", cleanup job cron: "0 30 4 * * *"
+2022-06-24 15:31:01,197 INFO 5333 [egg-redis] server connecting redis://:***@127.0.0.1:6379/2
+2022-06-24 15:31:01,605 INFO 5333 [egg-static] starting static serve /public/ -> /www/wwwroot/ceshi8.dishaxy.com/app/public
+2022-06-24 15:31:01,608 INFO 5333 [egg-security] use methodnoallow middleware
+2022-06-24 15:31:01,610 INFO 5333 [egg-security] use noopen middleware
+2022-06-24 15:31:01,612 INFO 5333 [egg-security] use nosniff middleware
+2022-06-24 15:31:01,614 INFO 5333 [egg-security] use xssProtection middleware
+2022-06-24 15:31:01,615 INFO 5333 [egg-security] use xframe middleware
+2022-06-24 15:31:01,618 INFO 5333 [egg-security] use dta middleware
+2022-06-24 15:31:01,618 INFO 5333 [egg-security] compose 6 middlewares into one security middleware
+2022-06-24 15:31:02,222 INFO 5333 [egg:core] dump config after load, 19ms
+2022-06-24 15:31:02,351 INFO 5333 [egg-redis] client connect success
+2022-06-24 15:31:02,385 INFO 5333 [egg-redis] instance[0] status OK, client ready
+2022-06-24 15:31:02,472 INFO 5333 [egg-watcher:application] watcher start success
+2022-06-24 15:31:02,557 INFO 5333 [egg:core] dump config after ready, 40ms
+2022-06-24 15:31:06,205 INFO 5354 [egg:logger] init all loggers with options: {"dir":"/www/wwwroot/ceshi8.dishaxy.com/logs/edu-api","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"edu-api-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-06-24 15:31:06,246 INFO 5354 [egg-multipart] file mode enable
+2022-06-24 15:31:06,246 INFO 5354 [egg-multipart] will save temporary files to "/tmp/egg-multipart-tmp/edu-api", cleanup job cron: "0 30 4 * * *"
+2022-06-24 15:31:06,638 INFO 5354 [egg-redis] server connecting redis://:***@127.0.0.1:6379/2
+2022-06-24 15:31:07,261 INFO 5354 [egg-static] starting static serve /public/ -> /www/wwwroot/ceshi8.dishaxy.com/app/public
+2022-06-24 15:31:07,266 INFO 5354 [egg-security] use methodnoallow middleware
+2022-06-24 15:31:07,267 INFO 5354 [egg-security] use noopen middleware
+2022-06-24 15:31:07,269 INFO 5354 [egg-security] use nosniff middleware
+2022-06-24 15:31:07,271 INFO 5354 [egg-security] use xssProtection middleware
+2022-06-24 15:31:07,273 INFO 5354 [egg-security] use xframe middleware
+2022-06-24 15:31:07,275 INFO 5354 [egg-security] use dta middleware
+2022-06-24 15:31:07,275 INFO 5354 [egg-security] compose 6 middlewares into one security middleware
+2022-06-24 15:31:07,887 INFO 5354 [egg:core] dump config after load, 10ms
+2022-06-24 15:31:07,997 INFO 5354 [egg-redis] client connect success
+2022-06-24 15:31:08,005 INFO 5354 [egg-redis] instance[0] status OK, client ready
+2022-06-24 15:31:08,028 INFO 5354 [egg-watcher:application] watcher start success
+2022-06-24 15:31:08,081 INFO 5354 [egg:core] dump config after ready, 25ms
+2022-07-19 21:24:39,196 INFO 14592 [egg:logger] init all loggers with options: {"dir":"/www/wwwroot/ceshi8.dishaxy.com/logs/edu-api","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"edu-api-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-07-19 21:24:39,226 INFO 14592 [egg-multipart] file mode enable
+2022-07-19 21:24:39,226 INFO 14592 [egg-multipart] will save temporary files to "/tmp/egg-multipart-tmp/edu-api", cleanup job cron: "0 30 4 * * *"
+2022-07-19 21:24:39,746 INFO 14592 [egg-redis] server connecting redis://:***@127.0.0.1:6379/2
+2022-07-19 21:24:40,250 INFO 14592 [egg-static] starting static serve /public/ -> /www/wwwroot/ceshi8.dishaxy.com/app/public
+2022-07-19 21:24:40,255 INFO 14592 [egg-security] use methodnoallow middleware
+2022-07-19 21:24:40,256 INFO 14592 [egg-security] use noopen middleware
+2022-07-19 21:24:40,257 INFO 14592 [egg-security] use nosniff middleware
+2022-07-19 21:24:40,259 INFO 14592 [egg-security] use xssProtection middleware
+2022-07-19 21:24:40,261 INFO 14592 [egg-security] use xframe middleware
+2022-07-19 21:24:40,263 INFO 14592 [egg-security] use dta middleware
+2022-07-19 21:24:40,263 INFO 14592 [egg-security] compose 6 middlewares into one security middleware
+2022-07-19 21:24:40,927 INFO 14592 [egg:core] dump config after load, 21ms
+2022-07-19 21:24:41,059 INFO 14592 [egg-redis] client connect success
+2022-07-19 21:24:41,095 INFO 14592 [egg-redis] instance[0] status OK, client ready
+2022-07-19 21:24:41,106 INFO 14592 [egg-watcher:application] watcher start success
+2022-07-19 21:24:41,132 INFO 14592 [egg:core] dump config after ready, 7ms
+2022-07-19 21:25:15,538 INFO 14699 [egg:logger] init all loggers with options: {"dir":"/www/wwwroot/ceshi8.dishaxy.com/logs/edu-api","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"edu-api-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-07-19 21:25:15,583 INFO 14699 [egg-multipart] file mode enable
+2022-07-19 21:25:15,583 INFO 14699 [egg-multipart] will save temporary files to "/tmp/egg-multipart-tmp/edu-api", cleanup job cron: "0 30 4 * * *"
+2022-07-19 21:25:16,044 INFO 14699 [egg-redis] server connecting redis://:***@127.0.0.1:6379/2
+2022-07-19 21:25:16,483 INFO 14699 [egg-static] starting static serve /public/ -> /www/wwwroot/ceshi8.dishaxy.com/app/public
+2022-07-19 21:25:16,487 INFO 14699 [egg-security] use methodnoallow middleware
+2022-07-19 21:25:16,490 INFO 14699 [egg-security] use noopen middleware
+2022-07-19 21:25:16,492 INFO 14699 [egg-security] use nosniff middleware
+2022-07-19 21:25:16,494 INFO 14699 [egg-security] use xssProtection middleware
+2022-07-19 21:25:16,496 INFO 14699 [egg-security] use xframe middleware
+2022-07-19 21:25:16,497 INFO 14699 [egg-security] use dta middleware
+2022-07-19 21:25:16,497 INFO 14699 [egg-security] compose 6 middlewares into one security middleware
+2022-07-19 21:25:16,987 INFO 14699 [egg:core] dump config after load, 20ms
+2022-07-19 21:25:17,289 INFO 14699 [egg-redis] client connect success
+2022-07-19 21:25:17,481 INFO 14699 [egg-redis] instance[0] status OK, client ready
+2022-07-19 21:25:17,489 INFO 14699 [egg-watcher:application] watcher start success
+2022-07-19 21:25:17,518 INFO 14699 [egg:core] dump config after ready, 5ms

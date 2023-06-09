@@ -1,0 +1,211 @@
+2021-09-01 01:56:31,248 ERROR 6624 [-/127.0.0.1/-/198ms POST /mobile/order/wxpay] nodejs.ReferenceError: api is not defined
+    at OrderController.wxpay (/www/wwwroot/ceshi8.dishaxy.com/app/controller/mobile/order.js:252:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async /www/wwwroot/ceshi8.dishaxy.com/app/middleware/check_bind_phone.js:8:9
+    at async /www/wwwroot/ceshi8.dishaxy.com/app/middleware/get_current_user_auth.js:52:9
+    at async /www/wwwroot/ceshi8.dishaxy.com/app/middleware/check_appid.js:27:9
+    at async errorHandler (/www/wwwroot/ceshi8.dishaxy.com/app/middleware/error_handler.js:4:13)
+    at async /www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:50
+    at async xframe (/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-security/lib/middlewares/xframe.js:7:5)
+    at async xssProtection (/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-security/lib/middlewares/xssProtection.js:7:5)
+
+pid: 6624
+hostname: iZj6cafy4bwpqanbrloldaZ
+
+2021-09-01 01:56:41,192 ERROR 6624 [-/127.0.0.1/-/147ms POST /mobile/order/wxpay] nodejs.ReferenceError: api is not defined
+    at OrderController.wxpay (/www/wwwroot/ceshi8.dishaxy.com/app/controller/mobile/order.js:252:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async /www/wwwroot/ceshi8.dishaxy.com/app/middleware/check_bind_phone.js:8:9
+    at async /www/wwwroot/ceshi8.dishaxy.com/app/middleware/get_current_user_auth.js:52:9
+    at async /www/wwwroot/ceshi8.dishaxy.com/app/middleware/check_appid.js:27:9
+    at async errorHandler (/www/wwwroot/ceshi8.dishaxy.com/app/middleware/error_handler.js:4:13)
+    at async /www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:50
+    at async xframe (/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-security/lib/middlewares/xframe.js:7:5)
+    at async xssProtection (/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-security/lib/middlewares/xssProtection.js:7:5)
+
+pid: 6624
+hostname: iZj6cafy4bwpqanbrloldaZ
+
+2021-09-09 13:30:07,531 ERROR 18088 [-/127.0.0.1/-/3ms GET /pc/hot] nodejs.ReferenceError: school_id is not defined
+    at CommonController.hot (/www/wwwroot/ceshi8.dishaxy.com/app/controller/pc/common.js:42:9)
+    at Object.callFn (/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/www/wwwroot/ceshi8.dishaxy.com/node_modules/@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/www/wwwroot/ceshi8.dishaxy.com/node_modules/@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/www/wwwroot/ceshi8.dishaxy.com/node_modules/koa-compose/index.js:44:32)
+    at next (/www/wwwroot/ceshi8.dishaxy.com/node_modules/koa-compose/index.js:45:18)
+    at /www/wwwroot/ceshi8.dishaxy.com/node_modules/@eggjs/router/lib/router.js:190:18
+    at dispatch (/www/wwwroot/ceshi8.dishaxy.com/node_modules/koa-compose/index.js:44:32)
+    at /www/wwwroot/ceshi8.dishaxy.com/node_modules/koa-compose/index.js:36:12
+
+pid: 18088
+hostname: iZj6cafy4bwpqanbrloldaZ
+
+2021-09-09 13:30:07,535 ERROR 18088 [-/127.0.0.1/-/2ms GET /pc/hot] nodejs.ReferenceError: school_id is not defined
+    at CommonController.hot (/www/wwwroot/ceshi8.dishaxy.com/app/controller/pc/common.js:42:9)
+    at Object.callFn (/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/www/wwwroot/ceshi8.dishaxy.com/node_modules/@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/www/wwwroot/ceshi8.dishaxy.com/node_modules/@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/www/wwwroot/ceshi8.dishaxy.com/node_modules/koa-compose/index.js:44:32)
+    at next (/www/wwwroot/ceshi8.dishaxy.com/node_modules/koa-compose/index.js:45:18)
+    at /www/wwwroot/ceshi8.dishaxy.com/node_modules/@eggjs/router/lib/router.js:190:18
+    at dispatch (/www/wwwroot/ceshi8.dishaxy.com/node_modules/koa-compose/index.js:44:32)
+    at /www/wwwroot/ceshi8.dishaxy.com/node_modules/koa-compose/index.js:36:12
+
+pid: 18088
+hostname: iZj6cafy4bwpqanbrloldaZ
+
+2021-09-09 16:48:49,040 ERROR 32551 [-/127.0.0.1/-/664ms POST /admin/s/course/update] nodejs.ReferenceError: ctx is not defined
+    at CourseController.testThrow (/www/wwwroot/ceshi8.dishaxy.com/app/controller/admin/course.js:168:9)
+    at CourseController.beforeUpdate (/www/wwwroot/ceshi8.dishaxy.com/app/controller/admin/course.js:142:14)
+    at CourseController.update (/www/wwwroot/ceshi8.dishaxy.com/app/controller/admin/base.js:189:28)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async /www/wwwroot/ceshi8.dishaxy.com/app/middleware/check_staff_auth.js:9:9
+    at async /www/wwwroot/ceshi8.dishaxy.com/app/middleware/check_school.js:27:9
+    at async /www/wwwroot/ceshi8.dishaxy.com/app/middleware/is_login.js:35:9
+    at async errorHandler (/www/wwwroot/ceshi8.dishaxy.com/app/middleware/error_handler.js:4:13)
+    at async /www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:50
+
+pid: 32551
+hostname: iZj6cafy4bwpqanbrloldaZ
+
+2021-09-10 20:36:52,562 ERROR 21958 nodejs.unhandledRejectionError: commit has been called on this transaction(9545f8d1-7225-4eae-8c2b-83086ac0ef4d), you can no longer use it. (The rejected query is attached as the 'sql' property of this error)
+    at checkTransaction (/www/wwwroot/ceshi8.dishaxy.com/node_modules/sequelize/lib/sequelize.js:598:23)
+    at /www/wwwroot/ceshi8.dishaxy.com/node_modules/sequelize/lib/sequelize.js:611:7
+    at /www/wwwroot/ceshi8.dishaxy.com/node_modules/retry-as-promised/index.js:70:21
+    at new Promise (<anonymous>)
+    at retryAsPromised (/www/wwwroot/ceshi8.dishaxy.com/node_modules/retry-as-promised/index.js:60:10)
+    at Sequelize.query (/www/wwwroot/ceshi8.dishaxy.com/node_modules/sequelize/lib/sequelize.js:606:12)
+    at MySQLQueryInterface.update (/www/wwwroot/ceshi8.dishaxy.com/node_modules/sequelize/lib/dialects/abstract/query-interface.js:849:33)
+    at model.save (/www/wwwroot/ceshi8.dishaxy.com/node_modules/sequelize/lib/model.js:3954:79)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+sql: "UPDATE `book` SET `sub_count`=?,`updated_time`=? WHERE `id` = ?"
+name: "unhandledRejectionError"
+pid: 21958
+hostname: iZj6cafy4bwpqanbrloldaZ
+
+2021-09-10 21:27:52,324 ERROR 25737 [-/127.0.0.1/-/65ms POST /order/notify] nodejs.ReferenceError: gw is not defined
+    at OrderController.notify (/www/wwwroot/ceshi8.dishaxy.com/app/controller/pc/order.js:391:62)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async /www/wwwroot/ceshi8.dishaxy.com/node_modules/tenpay/lib/index.js:246:7
+    at async errorHandler (/www/wwwroot/ceshi8.dishaxy.com/app/middleware/error_handler.js:4:13)
+    at async /www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:50
+    at async xframe (/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-security/lib/middlewares/xframe.js:7:5)
+    at async xssProtection (/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-security/lib/middlewares/xssProtection.js:7:5)
+    at async nosniff (/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-security/lib/middlewares/nosniff.js:8:5)
+    at async noopen (/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-security/lib/middlewares/noopen.js:8:5)
+
+pid: 25737
+hostname: iZj6cafy4bwpqanbrloldaZ
+
+2021-10-18 03:08:49,874 ERROR 17833 [-/127.0.0.1/-/90ms GET /mobile/order/list?page=1&limit=5] nodejs.SequelizeEagerLoadingError: live is not associated to order_item!
+    at Function._getIncludedAssociation (/www/wwwroot/ceshi8.dishaxy.com/node_modules/sequelize/lib/model.js:710:13)
+    at Function._validateIncludedElement (/www/wwwroot/ceshi8.dishaxy.com/node_modules/sequelize/lib/model.js:614:53)
+    at /www/wwwroot/ceshi8.dishaxy.com/node_modules/sequelize/lib/model.js:509:37
+    at Array.map (<anonymous>)
+    at Function._validateIncludedElements (/www/wwwroot/ceshi8.dishaxy.com/node_modules/sequelize/lib/model.js:504:39)
+    at Function._validateIncludedElement (/www/wwwroot/ceshi8.dishaxy.com/node_modules/sequelize/lib/model.js:700:38)
+    at /www/wwwroot/ceshi8.dishaxy.com/node_modules/sequelize/lib/model.js:509:37
+    at Array.map (<anonymous>)
+    at Function._validateIncludedElements (/www/wwwroot/ceshi8.dishaxy.com/node_modules/sequelize/lib/model.js:504:39)
+    at Function.aggregate (/www/wwwroot/ceshi8.dishaxy.com/node_modules/sequelize/lib/model.js:1949:12)
+name: "SequelizeEagerLoadingError"
+pid: 17833
+hostname: iZj6cafy4bwpqanbrloldaZ
+
+2021-10-18 03:08:49,893 ERROR 17833 [-/127.0.0.1/-/13ms GET /mobile/order/list?page=1&limit=5] nodejs.SequelizeEagerLoadingError: live is not associated to order_item!
+    at Function._getIncludedAssociation (/www/wwwroot/ceshi8.dishaxy.com/node_modules/sequelize/lib/model.js:710:13)
+    at Function._validateIncludedElement (/www/wwwroot/ceshi8.dishaxy.com/node_modules/sequelize/lib/model.js:614:53)
+    at /www/wwwroot/ceshi8.dishaxy.com/node_modules/sequelize/lib/model.js:509:37
+    at Array.map (<anonymous>)
+    at Function._validateIncludedElements (/www/wwwroot/ceshi8.dishaxy.com/node_modules/sequelize/lib/model.js:504:39)
+    at Function._validateIncludedElement (/www/wwwroot/ceshi8.dishaxy.com/node_modules/sequelize/lib/model.js:700:38)
+    at /www/wwwroot/ceshi8.dishaxy.com/node_modules/sequelize/lib/model.js:509:37
+    at Array.map (<anonymous>)
+    at Function._validateIncludedElements (/www/wwwroot/ceshi8.dishaxy.com/node_modules/sequelize/lib/model.js:504:39)
+    at Function.aggregate (/www/wwwroot/ceshi8.dishaxy.com/node_modules/sequelize/lib/model.js:1949:12)
+name: "SequelizeEagerLoadingError"
+pid: 17833
+hostname: iZj6cafy4bwpqanbrloldaZ
+
+2021-11-05 00:47:51,776 ERROR 12613 [-/127.0.0.1/-/382ms POST /mobile/order/wxpay] nodejs.Error: ORDERPAID
+    at Payment._parse (/www/wwwroot/ceshi8.dishaxy.com/node_modules/tenpay/lib/index.js:98:51)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+
+pid: 12613
+hostname: iZj6cafy4bwpqanbrloldaZ
+
+2021-11-05 01:01:23,689 ERROR 13564 [-/127.0.0.1/-/23ms POST /mobile/order/group] nodejs.ReferenceError: Op is not defined
+    at OrderController.saveGroup (/www/wwwroot/ceshi8.dishaxy.com/app/controller/mobile/order.js:596:18)
+    at Object.callFn (/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/www/wwwroot/ceshi8.dishaxy.com/node_modules/@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/www/wwwroot/ceshi8.dishaxy.com/node_modules/@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/www/wwwroot/ceshi8.dishaxy.com/node_modules/koa-compose/index.js:44:32)
+    at next (/www/wwwroot/ceshi8.dishaxy.com/node_modules/koa-compose/index.js:45:18)
+    at /www/wwwroot/ceshi8.dishaxy.com/node_modules/@eggjs/router/lib/router.js:190:18
+    at dispatch (/www/wwwroot/ceshi8.dishaxy.com/node_modules/koa-compose/index.js:44:32)
+    at /www/wwwroot/ceshi8.dishaxy.com/node_modules/koa-compose/index.js:36:12
+
+pid: 13564
+hostname: iZj6cafy4bwpqanbrloldaZ
+
+2022-05-31 02:10:25,879 ERROR 4909 [-/127.0.0.1/-/32ms GET /pc/getinfo] nodejs.ReferenceError: ctx is not defined
+    at UserController.getinfo (/www/wwwroot/ceshi8.dishaxy.com/app/controller/pc/user.js:368:9)
+    at Object.callFn (/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/www/wwwroot/ceshi8.dishaxy.com/node_modules/@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/www/wwwroot/ceshi8.dishaxy.com/node_modules/@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/www/wwwroot/ceshi8.dishaxy.com/node_modules/koa-compose/index.js:44:32)
+    at next (/www/wwwroot/ceshi8.dishaxy.com/node_modules/koa-compose/index.js:45:18)
+    at /www/wwwroot/ceshi8.dishaxy.com/node_modules/@eggjs/router/lib/router.js:190:18
+    at dispatch (/www/wwwroot/ceshi8.dishaxy.com/node_modules/koa-compose/index.js:44:32)
+    at /www/wwwroot/ceshi8.dishaxy.com/node_modules/koa-compose/index.js:36:12
+
+pid: 4909
+hostname: iZj6cafy4bwpqanbrloldaZ
+
+2022-05-31 02:10:25,889 ERROR 4909 [-/127.0.0.1/-/6ms GET /pc/getinfo] nodejs.ReferenceError: ctx is not defined
+    at UserController.getinfo (/www/wwwroot/ceshi8.dishaxy.com/app/controller/pc/user.js:368:9)
+    at Object.callFn (/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/www/wwwroot/ceshi8.dishaxy.com/node_modules/@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/www/wwwroot/ceshi8.dishaxy.com/node_modules/@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/www/wwwroot/ceshi8.dishaxy.com/node_modules/koa-compose/index.js:44:32)
+    at next (/www/wwwroot/ceshi8.dishaxy.com/node_modules/koa-compose/index.js:45:18)
+    at /www/wwwroot/ceshi8.dishaxy.com/node_modules/@eggjs/router/lib/router.js:190:18
+    at dispatch (/www/wwwroot/ceshi8.dishaxy.com/node_modules/koa-compose/index.js:44:32)
+    at /www/wwwroot/ceshi8.dishaxy.com/node_modules/koa-compose/index.js:36:12
+
+pid: 4909
+hostname: iZj6cafy4bwpqanbrloldaZ
+
+2022-06-14 23:57:53,692 ERROR 25782 [-/127.0.0.1/-/11ms POST /pc/upload] nodejs.EACCESError: EACCES: permission denied, mkdir '/tmp/egg-multipart-tmp/edu-api/2022/06/14/23'
+EACCESError: EACCES: permission denied, mkdir '/tmp/egg-multipart-tmp/edu-api/2022/06/14/23'
+errno: -13
+code: "EACCES"
+syscall: "mkdir"
+path: "/tmp/egg-multipart-tmp/edu-api/2022/06/14/23"
+headers: {"Access-Control-Allow-Origin":"*","vary":"Origin"}
+name: "EACCESError"
+pid: 25782
+hostname: iZj6cafy4bwpqanbrloldaZ
+
+2022-06-14 23:59:44,459 ERROR 25782 [-/127.0.0.1/-/11ms POST /pc/upload] nodejs.EACCESError: EACCES: permission denied, mkdir '/tmp/egg-multipart-tmp/edu-api/2022/06/14/23'
+EACCESError: EACCES: permission denied, mkdir '/tmp/egg-multipart-tmp/edu-api/2022/06/14/23'
+errno: -13
+code: "EACCES"
+syscall: "mkdir"
+path: "/tmp/egg-multipart-tmp/edu-api/2022/06/14/23"
+headers: {"Access-Control-Allow-Origin":"*","vary":"Origin"}
+name: "EACCESError"
+pid: 25782
+hostname: iZj6cafy4bwpqanbrloldaZ
+
