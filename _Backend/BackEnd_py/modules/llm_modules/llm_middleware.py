@@ -1,15 +1,16 @@
 from modules.llm_modules import openai_gpt
 from modules.database import llm_conversation
+import json
 
 memory_size = 1
 
 
 class Conversation:
     def __init__(self, conversation):
-        self.dObject_llm_conversation = conversation
-        self.prompt = conversation.conversation_context['prompt']
-        self.extra_source = conversation.conversation_context['extra_source']
-        self.messages = conversation.conversation_context['messages']
+        self.conv_id = conversation.id
+        self.prompt = conversation.prompt_setting['prompt']
+        self.extra_source = conversation.prompt_setting['extra_source']
+        self.messages = conversation.load_context()
 
     def requests(self, user_text, llm_api_call=openai_gpt.request_gpt):
         self.messages.append({"role": "user", "content": user_text})
@@ -18,11 +19,11 @@ class Conversation:
         response = llm_api_call(pmt, msg)
         self.messages.append({"role": "assistant", "content": response})
 
-    def update(self):
-        self.dObject_llm_conversation.update_context('messages', self.messages)
+    def update_context(self):
+        get_conversation(self.conv_id).update_context(self.messages)
 
     def to_json(self):
-        return self.dObject_llm_conversation.to_json()
+        return get_conversation(self.conv_id).to_json()
 
 
 def question_lookup(collection_name, first_question,k=3):
@@ -30,7 +31,7 @@ def question_lookup(collection_name, first_question,k=3):
 
 
 def new_conversation(collection_name, first_question):
-    conv = llm_conversation.llm_conversation_dObject(collection_name, first_question)
+    conv = llm_conversation.DObject_llm_conversation(collection_name, first_question)
     return conv
 
 

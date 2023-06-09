@@ -1,11 +1,17 @@
 from modules.database import llm_conversation
 from modules.database import database_base
+from modules.llm_modules import llm_middleware
 database_base.init_db()
-#v = llm_conversation.DObject_llm_conversation("test", "1234")
-#v = llm_conversation.DObject_llm_conversation("test", "12345")
-#v = llm_conversation.DObject_llm_conversation("test", "00000")
+v = llm_middleware.new_conversation('test_post', 'text')
+conv = llm_middleware.Conversation(v)
+conv.requests('text')
+conv.requests('text')
+conv.update_context()
+print(conv.to_json())
+i= conv.to_json()['id']
 
-#collection = database_base.vectorstore_client.get_or_create_collection(name="test")
-#print(collection.query(query_texts=['1234'],n_results =3))
-print(llm_conversation.top_ask("test"))
-print(llm_conversation.top_ask("test"))
+#llm_middleware.get_conversation(i).update_context(conv.messages)
+#v.update_context(conv.messages)
+print(v.to_json())
+
+print(llm_middleware.get_conversation(i).to_json())

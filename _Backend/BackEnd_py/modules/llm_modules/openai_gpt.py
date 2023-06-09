@@ -1,4 +1,3 @@
-from modules.llm_modules import llm
 import openai
 openai.api_key = "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"
 

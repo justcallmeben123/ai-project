@@ -1,3 +1,5 @@
+import json
+
 import numpy as np
 from sqlalchemy import Column, Integer, String,Text,JSON
 from modules.database import database_base
@@ -5,19 +7,27 @@ from chromadb.utils import embedding_functions
 
 emb_fn = embedding_functions.DefaultEmbeddingFunction()
 
+default_prompt_setting = {
+    'prompt' : "你是猫娘",
+    'extra_source':"",
+}
+
 class DObject_llm_conversation(database_base.Base):
-    __tablename__ = 'test__'
+    __tablename__ = 'test___'
     id = Column(Integer, primary_key=True)
     collection_name = Column(String(50)) #course id
     first_question = Column(Text)
-    conversation_context = Column(JSON)
+    prompt_setting = Column(JSON)
+    conversation_context = Column(Text)
     evaluation = Column(Integer)
     frequency = Column(Integer)
 
-    def __init__(self, collection_name, first_question, conversation_context=None):
+    def __init__(self, collection_name, first_question, initial_prompt=None):
         self.collection_name = collection_name
         self.first_question = first_question
-        self.conversation_context = conversation_context
+        if initial_prompt is None:
+            self.prompt_setting = default_prompt_setting
+        self.conversation_context = json.dumps([])
         self.evaluation = 0
         self.frequency = 1
 
@@ -31,12 +41,13 @@ class DObject_llm_conversation(database_base.Base):
             metadatas=[{"id":self.id }],
             ids=[str(self.id)]
         )
-        print(self.id)
-        print(self.collection_name)
 
-    def update_context(self,key,value):
-        self.conversation_context = conversation_context
+    def update_context(self,context):
+        self.conversation_context = json.dumps(context)
         database_base.db_session.commit()
+
+    def load_context(self):
+        return json.loads(self.conversation_context)
 
     def like(self):
         self.evaluation += 1
@@ -64,8 +75,10 @@ class DObject_llm_conversation(database_base.Base):
             'id': self.id,
             'collection_name': self.collection_name,
             'first_question': self.first_question,
-            'conversation_context': self.conversation,
-            'evaluation': self.evaluation
+            'prompt_setting':self.prompt_setting,
+            'conversation_context': self.load_context(),
+            'evaluation': self.evaluation,
+            'frequency':self.frequency
         }
 
 question_lookup_threshold = 1
@@ -76,7 +89,6 @@ def question_lookup(collection_name,first_question,k = 3):
     distances = result['distances'][0]
     conv = []
     for i in range(len(ids)):
-        print(distances[i])
         if distances[i] < question_lookup_threshold:
             conv.append(DObject_llm_conversation.query.get(int(ids[i])))
     return conv

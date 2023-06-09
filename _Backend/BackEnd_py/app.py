@@ -43,11 +43,11 @@ class LLM_Access_Checker(Resource):
 class LLM_Caller(Resource):
     def get(self):
         token = request.headers.get("token")
-        data = request.args
-        conv_id = data.get("id")
-
         if llm_access_token.check_llm_access_token(token) is None:
             return response_generator.fail("Token 无效", code=-1)
+
+        data = request.args
+        conv_id = data.get("id")
 
         result = llm_middleware.get_conversation(conv_id)
         if result is None:
@@ -61,26 +61,28 @@ class LLM_Caller(Resource):
             return response_generator.fail("Token 无效", code=-1)
 
         data = request.get_json()
-        type = data.get("type")
+        call_type = data.get("type")
         collection_name = data.get("collection_name")
-        if type == 'new':
+        if call_type == 'new':
             text = data.get("text")
             conv = llm_middleware.Conversation(llm_middleware.new_conversation(collection_name, text))
             conv.requests(text)
-            conv.update()
+            conv.update_context()
             return response_generator.ok(conv.to_json())
-        elif type == 'top_ask':
+        elif call_type == 'top_ask':
             top_asks = [x.to_json() for x in llm_middleware.top_ask(collection_name)]
             return response_generator.ok(top_asks)
-        elif type == 'top_close':
+        elif call_type == 'top_close':
             text = data.get("text")
             top_closes = [x.to_json() for x in llm_middleware.question_lookup(collection_name,text)]
             for c in top_closes: c.frequency()
             return response_generator.ok(top_closes)
-        elif type == 'like':
-            return response_generator.ok(llm_middleware.like())
-        elif type == 'dislike':
-            return response_generator.ok(llm_middleware.dislike())
+        elif call_type == 'like':
+            conv_id = data.get("id")
+            return response_generator.ok(llm_middleware.like(conv_id))
+        elif call_type == 'dislike':
+            conv_id = data.get("id")
+            return response_generator.ok(llm_middleware.dislike(conv_id))
         else:
             return response_generator.fail("type 无效", code=-2)
 
