@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, String,Text,JSON
 from modules.database.base import Database_Base
 
-def Database_llm_conversation(Database_Base):
+class llm_conversation_dObject(Database_Base):
     __tablename__ = 'llm_conversation'
     id = Column(Integer, primary_key=True)
     collection_name = Column(String(50)) #course id
