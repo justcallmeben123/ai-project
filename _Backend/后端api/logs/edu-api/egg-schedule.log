@@ -1,0 +1,33 @@
+2022-06-24 15:27:58,957 INFO 5088 [egg-schedule]: register schedule /www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2022-06-24 15:27:58,957 INFO 5088 [egg-schedule]: register schedule /www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-logrotator/app/schedule/clean_log.js
+2022-06-24 15:27:58,957 INFO 5088 [egg-schedule]: register schedule /www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2022-06-24 15:28:00,344 INFO 5075 [Timer] /www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 46919659ms at 2022-06-25 04:30:00.003
+2022-06-24 15:28:00,345 INFO 5075 [Timer] /www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 30719655ms at 2022-06-25 00:00:00.000
+2022-06-24 15:28:00,345 INFO 5075 [Timer] /www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 30720655ms at 2022-06-25 00:00:01.000
+2022-06-24 15:29:00,311 INFO 5162 [egg-schedule]: register schedule /www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2022-06-24 15:29:00,311 INFO 5162 [egg-schedule]: register schedule /www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-logrotator/app/schedule/clean_log.js
+2022-06-24 15:29:00,312 INFO 5162 [egg-schedule]: register schedule /www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2022-06-24 15:29:59,460 INFO 5234 [egg-schedule]: register schedule /www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2022-06-24 15:29:59,460 INFO 5234 [egg-schedule]: register schedule /www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-logrotator/app/schedule/clean_log.js
+2022-06-24 15:29:59,460 INFO 5234 [egg-schedule]: register schedule /www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2022-06-24 15:30:32,935 INFO 5297 [egg-schedule]: register schedule /www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2022-06-24 15:30:32,935 INFO 5297 [egg-schedule]: register schedule /www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-logrotator/app/schedule/clean_log.js
+2022-06-24 15:30:32,935 INFO 5297 [egg-schedule]: register schedule /www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2022-06-24 15:31:00,719 INFO 5333 [egg-schedule]: register schedule /www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2022-06-24 15:31:00,719 INFO 5333 [egg-schedule]: register schedule /www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-logrotator/app/schedule/clean_log.js
+2022-06-24 15:31:00,719 INFO 5333 [egg-schedule]: register schedule /www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2022-06-24 15:31:06,245 INFO 5354 [egg-schedule]: register schedule /www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2022-06-24 15:31:06,245 INFO 5354 [egg-schedule]: register schedule /www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-logrotator/app/schedule/clean_log.js
+2022-06-24 15:31:06,245 INFO 5354 [egg-schedule]: register schedule /www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2022-07-19 21:24:39,225 INFO 14592 [egg-schedule]: register schedule /www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2022-07-19 21:24:39,225 INFO 14592 [egg-schedule]: register schedule /www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-logrotator/app/schedule/clean_log.js
+2022-07-19 21:24:39,225 INFO 14592 [egg-schedule]: register schedule /www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2022-07-19 21:24:41,139 INFO 14574 [Timer] /www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 25518865ms at 2022-07-20 04:30:00.004
+2022-07-19 21:24:41,139 INFO 14574 [Timer] /www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 9318861ms at 2022-07-20 00:00:00.000
+2022-07-19 21:24:41,139 INFO 14574 [Timer] /www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 9319861ms at 2022-07-20 00:00:01.000
+2022-07-19 21:25:15,582 INFO 14699 [egg-schedule]: register schedule /www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2022-07-19 21:25:15,582 INFO 14699 [egg-schedule]: register schedule /www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-logrotator/app/schedule/clean_log.js
+2022-07-19 21:25:15,582 INFO 14699 [egg-schedule]: register schedule /www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2022-07-19 21:25:17,530 INFO 14687 [Timer] /www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 25482473ms at 2022-07-20 04:30:00.003
+2022-07-19 21:25:17,531 INFO 14687 [Timer] /www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 9282470ms at 2022-07-20 00:00:00.001
+2022-07-19 21:25:17,531 INFO 14687 [Timer] /www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 9283469ms at 2022-07-20 00:00:01.000

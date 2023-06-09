@@ -1,0 +1,478 @@
+{
+  "keys": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+  "security": {
+    "csrf": {
+      "enable": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+      "type": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-security/config/config.default.js",
+      "ignoreJSON": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-security/config/config.default.js",
+      "useSession": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-security/config/config.default.js",
+      "cookieName": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-security/config/config.default.js",
+      "sessionName": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-security/config/config.default.js",
+      "headerName": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-security/config/config.default.js",
+      "bodyName": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-security/config/config.default.js",
+      "queryName": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-security/config/config.default.js",
+      "supportedRequests": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-security/config/config.default.js",
+      "refererWhiteList": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-security/config/config.default.js"
+    },
+    "domainWhiteList": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-security/config/config.default.js",
+    "protocolWhiteList": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-security/config/config.default.js",
+    "defaultMiddleware": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-security/config/config.default.js",
+    "xframe": {
+      "enable": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-security/config/config.default.js",
+      "value": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-security/config/config.default.js"
+    },
+    "hsts": {
+      "enable": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-security/config/config.default.js",
+      "maxAge": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-security/config/config.default.js",
+      "includeSubdomains": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-security/config/config.default.js"
+    },
+    "dta": {
+      "enable": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-security/config/config.default.js"
+    },
+    "methodnoallow": {
+      "enable": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-security/config/config.default.js"
+    },
+    "noopen": {
+      "enable": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-security/config/config.default.js"
+    },
+    "nosniff": {
+      "enable": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-security/config/config.default.js"
+    },
+    "referrerPolicy": {
+      "enable": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-security/config/config.default.js",
+      "value": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-security/config/config.default.js"
+    },
+    "xssProtection": {
+      "enable": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-security/config/config.default.js",
+      "value": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-security/config/config.default.js"
+    },
+    "csp": {
+      "enable": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-security/config/config.default.js",
+      "policy": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-security/config/config.default.js"
+    },
+    "ssrf": {
+      "ipBlackList": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-security/config/config.default.js",
+      "ipExceptionList": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-security/config/config.default.js",
+      "checkAddress": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-security/config/config.default.js"
+    }
+  },
+  "cors": {
+    "origin": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+    "allowMethods": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js"
+  },
+  "crypto": {
+    "secret": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js"
+  },
+  "middleware": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+  "checkPlatformAuth": {
+    "match": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js"
+  },
+  "checkAppid": {
+    "match": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js"
+  },
+  "getCurrentUser": {
+    "match": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js"
+  },
+  "getCurrentUserAuth": {
+    "match": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js"
+  },
+  "checkBindPhone": {
+    "match": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js"
+  },
+  "isLogin": {
+    "match": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js"
+  },
+  "checkSchool": {
+    "match": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js"
+  },
+  "checkStaffAuth": {
+    "match": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js"
+  },
+  "sequelize": {
+    "dialect": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+    "host": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+    "username": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+    "password": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+    "port": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+    "database": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+    "timezone": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+    "define": {
+      "freezeTableName": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+      "timestamps": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+      "createdAt": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+      "updatedAt": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+      "underscored": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js"
+    }
+  },
+  "oss": {
+    "client": {
+      "accessKeyId": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+      "accessKeySecret": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+      "bucket": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+      "endpoint": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+      "timeout": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js"
+    },
+    "default": {
+      "timeout": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-oss/config/config.default.js"
+    },
+    "useAgent": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-oss/config/config.default.js"
+  },
+  "multipart": {
+    "fileSize": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+    "mode": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+    "fileExtensions": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+    "autoFields": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-multipart/config/config.default.js",
+    "defaultCharset": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-multipart/config/config.default.js",
+    "fieldNameSize": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-multipart/config/config.default.js",
+    "fieldSize": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-multipart/config/config.default.js",
+    "fields": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-multipart/config/config.default.js",
+    "files": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-multipart/config/config.default.js",
+    "whitelist": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-multipart/config/config.default.js",
+    "allowArrayField": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-multipart/config/config.default.js",
+    "tmpdir": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-multipart/config/config.default.js",
+    "cleanSchedule": {
+      "cron": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-multipart/config/config.default.js",
+      "disable": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-multipart/config/config.default.js"
+    }
+  },
+  "tencentVod": {
+    "secret_id": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+    "secret_key": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+    "vodSubAppId": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js"
+  },
+  "Queue": {
+    "redis": {
+      "port": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+      "host": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+      "db": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+      "password": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js"
+    },
+    "defaultJobOptions": {
+      "attempts": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+      "removeOnComplete": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+      "backoff": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+      "delay": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js"
+    },
+    "limiter": {
+      "max": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+      "duration": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js"
+    },
+    "settings": {
+      "maxStalledCount": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+      "guardInterval": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+      "retryProcessDelay": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js"
+    }
+  },
+  "aliSMS": {
+    "isopen": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+    "expire": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+    "accessKeyId": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+    "accessSecret": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+    "regionId": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+    "endpoint": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+    "version": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+    "SignName": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+    "TemplateCode": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js"
+  },
+  "valparams": {
+    "locale": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+    "throwError": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+    "cover": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-valparams/config/config.default.js",
+    "allowMultiCall": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-valparams/config/config.default.js",
+    "allowEmptyStr": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-valparams/config/config.default.js"
+  },
+  "redis": {
+    "client": {
+      "port": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+      "host": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+      "password": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+      "db": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js"
+    },
+    "default": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-redis/config/config.default.js",
+    "app": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-redis/config/config.default.js",
+    "agent": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-redis/config/config.default.js",
+    "supportTimeCommand": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-redis/config/config.default.js"
+  },
+  "jwt": {
+    "secret": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+    "enable": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-jwt/config/config.default.js"
+  },
+  "webUrl": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+  "tenpay": {
+    "client": {
+      "appid": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+      "mchid": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+      "partnerKey": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+      "notify_url": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js"
+    }
+  },
+  "mpWeixin": {
+    "appid": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+    "secret": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js"
+  },
+  "H5Weixin": {
+    "appid": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+    "secret": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js"
+  },
+  "mediaServerBaseUrl": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+  "mediaServer": {
+    "rtmp": {
+      "port": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+      "chunk_size": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+      "gop_cache": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+      "ping": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+      "ping_timeout": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js"
+    },
+    "http": {
+      "port": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+      "allow_origin": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js"
+    },
+    "auth": {
+      "play": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+      "publish": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+      "secret": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js"
+    },
+    "relay": {
+      "ffmpeg": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js",
+      "tasks": "/www/wwwroot/ceshi8.dishaxy.com/config/config.default.js"
+    }
+  },
+  "session": {
+    "maxAge": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-session/config/config.default.js",
+    "key": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-session/config/config.default.js",
+    "httpOnly": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-session/config/config.default.js",
+    "encrypt": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-session/config/config.default.js",
+    "logValue": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-session/config/config.default.js"
+  },
+  "helper": {
+    "shtml": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-security/config/config.default.js"
+  },
+  "jsonp": {
+    "limit": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-jsonp/config/config.default.js",
+    "callback": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-jsonp/config/config.default.js",
+    "csrf": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-jsonp/config/config.default.js"
+  },
+  "onerror": {
+    "errorPageUrl": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-onerror/config/config.default.js",
+    "appErrorFilter": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-onerror/config/config.default.js",
+    "templatePath": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-onerror/config/config.default.js"
+  },
+  "i18n": {
+    "defaultLocale": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-i18n/config/config.default.js",
+    "dirs": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-i18n/config/config.default.js",
+    "queryField": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-i18n/config/config.default.js",
+    "cookieField": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-i18n/config/config.default.js",
+    "cookieDomain": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-i18n/config/config.default.js",
+    "cookieMaxAge": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-i18n/config/config.default.js"
+  },
+  "watcher": {
+    "type": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-watcher/config/config.default.js",
+    "eventSources": {
+      "default": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-watcher/config/config.default.js",
+      "development": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-watcher/config/config.default.js"
+    }
+  },
+  "customLogger": {
+    "scheduleLogger": {
+      "consoleLevel": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-schedule/config/config.default.js",
+      "file": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-schedule/config/config.default.js"
+    }
+  },
+  "schedule": {
+    "directory": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-schedule/config/config.default.js"
+  },
+  "logrotator": {
+    "filesRotateByHour": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-logrotator/config/config.default.js",
+    "hourDelimiter": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-logrotator/config/config.default.js",
+    "filesRotateBySize": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-logrotator/config/config.default.js",
+    "maxFileSize": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-logrotator/config/config.default.js",
+    "maxFiles": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-logrotator/config/config.default.js",
+    "rotateDuration": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-logrotator/config/config.default.js",
+    "maxDays": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-logrotator/config/config.default.js"
+  },
+  "static": {
+    "prefix": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-static/config/config.default.js",
+    "dir": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-static/config/config.default.js",
+    "dynamic": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-static/config/config.default.js",
+    "preload": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-static/config/config.default.js",
+    "buffer": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-static/config/config.prod.js",
+    "maxFiles": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-static/config/config.default.js",
+    "maxAge": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-static/config/config.prod.js"
+  },
+  "view": {
+    "root": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-view/config/config.default.js",
+    "cache": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-view/config/config.default.js",
+    "defaultExtension": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-view/config/config.default.js",
+    "defaultViewEngine": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-view/config/config.default.js",
+    "mapping": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-view/config/config.default.js"
+  },
+  "bodyParser": {
+    "enableTypes": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-tenpay/config/config.default.js",
+    "extendTypes": {
+      "text": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-tenpay/config/config.default.js"
+    },
+    "enable": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+    "encoding": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+    "formLimit": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+    "jsonLimit": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+    "textLimit": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+    "strict": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+    "queryString": {
+      "arrayLimit": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+      "depth": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+      "parameterLimit": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js"
+    },
+    "onerror": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js"
+  },
+  "env": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+  "name": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+  "cookies": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+  "proxy": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+  "maxIpsCount": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+  "maxProxyCount": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+  "protocolHeaders": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+  "ipHeaders": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+  "hostHeaders": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+  "pkg": {
+    "name": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+    "version": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+    "description": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+    "private": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+    "egg": {
+      "declarations": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js"
+    },
+    "dependencies": {
+      "@alicloud/pop-core": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+      "ali-oss": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+      "await-stream-ready": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+      "bull": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+      "crypto": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+      "dayjs": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+      "egg": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+      "egg-cors": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+      "egg-jwt": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+      "egg-oss": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+      "egg-redis": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+      "egg-scripts": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+      "egg-sequelize": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+      "egg-tenpay": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+      "egg-valparams": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+      "md5": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+      "mysql2": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+      "node-media-server": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+      "querystring": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+      "stream-wormhole": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+      "xlsx": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js"
+    },
+    "devDependencies": {
+      "autod": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+      "autod-egg": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+      "egg-bin": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+      "egg-ci": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+      "egg-mock": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+      "eslint": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+      "eslint-config-egg": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+      "sequelize-cli": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js"
+    },
+    "engines": {
+      "node": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js"
+    },
+    "scripts": {
+      "start": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+      "stop": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+      "dev": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+      "debug": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+      "test": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+      "test-local": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+      "cov": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+      "lint": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+      "ci": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+      "autod": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js"
+    },
+    "ci": {
+      "version": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js"
+    },
+    "repository": {
+      "type": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+      "url": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js"
+    },
+    "author": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+    "license": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js"
+  },
+  "baseDir": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+  "HOME": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+  "rundir": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+  "dump": {
+    "ignore": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js"
+  },
+  "confusedConfigurations": {
+    "bodyparser": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+    "notFound": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+    "sitefile": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+    "middlewares": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+    "httpClient": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js"
+  },
+  "notfound": {
+    "pageUrl": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js"
+  },
+  "siteFile": {
+    "/favicon.ico": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+    "cacheControl": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js"
+  },
+  "logger": {
+    "dir": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+    "encoding": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+    "env": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+    "level": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+    "consoleLevel": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+    "disableConsoleAfterReady": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+    "outputJSON": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+    "buffer": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+    "appLogName": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+    "coreLogName": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+    "agentLogName": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+    "errorLogName": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+    "coreLogger": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+    "allowDebugAtProd": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+    "enablePerformanceTimer": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js"
+  },
+  "httpclient": {
+    "enableDNSCache": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+    "dnsCacheLookupInterval": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+    "dnsCacheMaxLength": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+    "request": {
+      "timeout": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js"
+    },
+    "httpAgent": {
+      "keepAlive": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+      "freeSocketTimeout": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+      "maxSockets": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+      "maxFreeSockets": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js"
+    },
+    "httpsAgent": {
+      "keepAlive": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+      "freeSocketTimeout": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+      "maxSockets": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+      "maxFreeSockets": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js"
+    }
+  },
+  "meta": {
+    "enable": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+    "logging": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js"
+  },
+  "coreMiddleware": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+  "workerStartTimeout": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+  "serverTimeout": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+  "cluster": {
+    "listen": {
+      "path": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+      "port": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+      "hostname": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js"
+    }
+  },
+  "clusterClient": {
+    "maxWaitTime": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js",
+    "responseTimeout": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js"
+  },
+  "onClientError": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/config.default.js"
+}

@@ -1,0 +1,993 @@
+{
+  "config": {
+    "session": {
+      "maxAge": 86400000,
+      "key": "EGG_SESS",
+      "httpOnly": true,
+      "encrypt": true,
+      "logValue": true
+    },
+    "security": {
+      "domainWhiteList": [],
+      "protocolWhiteList": [],
+      "defaultMiddleware": "csrf,hsts,methodnoallow,noopen,nosniff,csp,xssProtection,xframe,dta",
+      "csrf": {
+        "enable": false,
+        "type": "ctoken",
+        "ignoreJSON": false,
+        "useSession": false,
+        "cookieName": "csrfToken",
+        "sessionName": "csrfToken",
+        "headerName": "x-csrf-token",
+        "bodyName": "_csrf",
+        "queryName": "_csrf",
+        "supportedRequests": [
+          {
+            "path": {},
+            "methods": [
+              "POST",
+              "PATCH",
+              "DELETE",
+              "PUT",
+              "CONNECT"
+            ]
+          }
+        ],
+        "refererWhiteList": []
+      },
+      "xframe": {
+        "enable": true,
+        "value": "SAMEORIGIN"
+      },
+      "hsts": {
+        "enable": false,
+        "maxAge": 31536000,
+        "includeSubdomains": false
+      },
+      "dta": {
+        "enable": true
+      },
+      "methodnoallow": {
+        "enable": true
+      },
+      "noopen": {
+        "enable": true
+      },
+      "nosniff": {
+        "enable": true
+      },
+      "referrerPolicy": {
+        "enable": false,
+        "value": "no-referrer-when-downgrade"
+      },
+      "xssProtection": {
+        "enable": true,
+        "value": "1; mode=block"
+      },
+      "csp": {
+        "enable": false,
+        "policy": {}
+      },
+      "ssrf": {
+        "ipBlackList": null,
+        "ipExceptionList": null,
+        "checkAddress": null
+      },
+      "_protocolWhiteListSet": "<Set>"
+    },
+    "helper": {
+      "shtml": {}
+    },
+    "jsonp": {
+      "limit": 50,
+      "callback": [
+        "_callback",
+        "callback"
+      ],
+      "csrf": false
+    },
+    "onerror": {
+      "errorPageUrl": "",
+      "appErrorFilter": null,
+      "templatePath": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-onerror/lib/onerror_page.mustache"
+    },
+    "i18n": {
+      "defaultLocale": "en_US",
+      "dirs": [],
+      "queryField": "locale",
+      "cookieField": "locale",
+      "cookieDomain": "",
+      "cookieMaxAge": "1y"
+    },
+    "watcher": {
+      "type": "default",
+      "eventSources": {
+        "default": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-watcher/lib/event-sources/default",
+        "development": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-watcher/lib/event-sources/development"
+      }
+    },
+    "customLogger": {
+      "scheduleLogger": {
+        "consoleLevel": "NONE",
+        "file": "egg-schedule.log"
+      }
+    },
+    "schedule": {
+      "directory": []
+    },
+    "multipart": {
+      "mode": "file",
+      "autoFields": false,
+      "defaultCharset": "utf8",
+      "fieldNameSize": 100,
+      "fieldSize": "100kb",
+      "fields": 10,
+      "fileSize": 1048576000,
+      "files": 10,
+      "fileExtensions": [
+        ".jpg",
+        ".jpeg",
+        ".png",
+        ".gif",
+        ".mp3",
+        ".mp4",
+        ".avi",
+        ".xls",
+        ".xlsx"
+      ],
+      "whitelist": null,
+      "allowArrayField": false,
+      "tmpdir": "/tmp/egg-multipart-tmp/edu-api",
+      "cleanSchedule": {
+        "cron": "0 30 4 * * *",
+        "disable": false
+      }
+    },
+    "logrotator": {
+      "filesRotateByHour": null,
+      "hourDelimiter": "-",
+      "filesRotateBySize": null,
+      "maxFileSize": 52428800,
+      "maxFiles": 10,
+      "rotateDuration": 60000,
+      "maxDays": 31
+    },
+    "static": {
+      "prefix": "/public/",
+      "dir": "/www/wwwroot/ceshi8.dishaxy.com/app/public",
+      "dynamic": true,
+      "preload": false,
+      "buffer": true,
+      "maxFiles": 1000,
+      "maxAge": 31536000
+    },
+    "view": {
+      "root": "/www/wwwroot/ceshi8.dishaxy.com/app/view",
+      "cache": true,
+      "defaultExtension": ".html",
+      "defaultViewEngine": "",
+      "mapping": {}
+    },
+    "cors": {
+      "origin": "*",
+      "allowMethods": "GET, PUT, POST, DELETE, PATCH"
+    },
+    "sequelize": {
+      "dialect": "mysql",
+      "database": "ceshi8_dishaxy_c",
+      "host": "127.0.0.1",
+      "port": 3306,
+      "username": "ceshi8_dishaxy_c",
+      "password": "<String len: 16>",
+      "timezone": "+08:00",
+      "define": {
+        "freezeTableName": true,
+        "timestamps": true,
+        "createdAt": "created_time",
+        "updatedAt": "updated_time",
+        "underscored": true
+      }
+    },
+    "jwt": {
+      "secret": "<String len: 34>",
+      "enable": false
+    },
+    "redis": {
+      "default": {},
+      "app": true,
+      "agent": false,
+      "supportTimeCommand": true,
+      "client": {
+        "port": 6379,
+        "host": "127.0.0.1",
+        "password": "<String len: 0>",
+        "db": 2
+      }
+    },
+    "valparams": {
+      "cover": true,
+      "allowMultiCall": true,
+      "throwError": true,
+      "allowEmptyStr": false,
+      "locale": "zh-cn"
+    },
+    "oss": {
+      "default": {
+        "timeout": "60s"
+      },
+      "useAgent": false,
+      "client": {
+        "accessKeyId": "LTAI4G43qDESd9X7d16gR9y3",
+        "accessKeySecret": "<String len: 30>",
+        "bucket": "demo-mp3",
+        "endpoint": "oss-cn-shenzhen.aliyuncs.com",
+        "timeout": "60s"
+      }
+    },
+    "tenpay": {
+      "client": {
+        "appid": "wxc559eade7d0a3bde",
+        "mchid": "1554108981",
+        "partnerKey": "8b07811ec793049f1c97793464c7049f",
+        "notify_url": "http://demonuxtapi.dishait.cn/mborder/notify"
+      }
+    },
+    "bodyParser": {
+      "enableTypes": [
+        "json",
+        "form",
+        "text"
+      ],
+      "extendTypes": {
+        "text": [
+          "text/xml",
+          "application/xml"
+        ]
+      },
+      "enable": true,
+      "encoding": "utf8",
+      "formLimit": "1mb",
+      "jsonLimit": "1mb",
+      "textLimit": "1mb",
+      "strict": true,
+      "queryString": {
+        "arrayLimit": 100,
+        "depth": 5,
+        "parameterLimit": 1000
+      },
+      "onerror": "<Function onerror>"
+    },
+    "env": "prod",
+    "name": "edu-api",
+    "keys": "<String len: 26>",
+    "cookies": {},
+    "proxy": false,
+    "maxIpsCount": 0,
+    "maxProxyCount": 0,
+    "protocolHeaders": "x-forwarded-proto",
+    "ipHeaders": "x-forwarded-for",
+    "hostHeaders": "",
+    "pkg": {
+      "name": "edu-api",
+      "version": "1.0.0",
+      "description": "",
+      "private": true,
+      "egg": {
+        "declarations": true
+      },
+      "dependencies": {
+        "@alicloud/pop-core": "^1.7.10",
+        "ali-oss": "^6.15.2",
+        "await-stream-ready": "^1.0.1",
+        "bull": "^3.29.1",
+        "crypto": "^1.0.1",
+        "dayjs": "^1.10.4",
+        "egg": "^2.15.1",
+        "egg-cors": "^2.2.3",
+        "egg-jwt": "^3.1.7",
+        "egg-oss": "^2.0.0",
+        "egg-redis": "^2.4.0",
+        "egg-scripts": "^2.11.0",
+        "egg-sequelize": "^6.0.0",
+        "egg-tenpay": "^1.0.1",
+        "egg-valparams": "^1.4.3",
+        "md5": "^2.3.0",
+        "mysql2": "^2.2.5",
+        "node-media-server": "^2.3.8",
+        "querystring": "^0.2.1",
+        "stream-wormhole": "^1.1.0",
+        "xlsx": "^0.16.9"
+      },
+      "devDependencies": {
+        "autod": "^3.0.1",
+        "autod-egg": "^1.1.0",
+        "egg-bin": "^4.11.0",
+        "egg-ci": "^1.11.0",
+        "egg-mock": "^3.21.0",
+        "eslint": "^5.13.0",
+        "eslint-config-egg": "^7.1.0",
+        "sequelize-cli": "^6.2.0"
+      },
+      "engines": {
+        "node": ">=10.0.0"
+      },
+      "scripts": {
+        "start": "egg-scripts start --daemon --title=egg-server-edu-api --port=7003",
+        "stop": "egg-scripts stop --title=egg-server-edu-api",
+        "dev": "egg-bin dev --port=7003",
+        "debug": "egg-bin debug",
+        "test": "npm run lint -- --fix && npm run test-local",
+        "test-local": "egg-bin test",
+        "cov": "egg-bin cov",
+        "lint": "eslint .",
+        "ci": "npm run lint && npm run cov",
+        "autod": "autod"
+      },
+      "ci": {
+        "version": "10"
+      },
+      "repository": {
+        "type": "git",
+        "url": ""
+      },
+      "author": "",
+      "license": "MIT"
+    },
+    "baseDir": "/www/wwwroot/ceshi8.dishaxy.com",
+    "HOME": "/home/www",
+    "rundir": "/www/wwwroot/ceshi8.dishaxy.com/run",
+    "dump": {
+      "ignore": "<Set>"
+    },
+    "confusedConfigurations": {
+      "bodyparser": "bodyParser",
+      "notFound": "notfound",
+      "sitefile": "siteFile",
+      "middlewares": "middleware",
+      "httpClient": "httpclient"
+    },
+    "notfound": {
+      "pageUrl": ""
+    },
+    "siteFile": {
+      "/favicon.ico": "<Buffer len: 6463>",
+      "cacheControl": "public, max-age=2592000"
+    },
+    "logger": {
+      "dir": "/home/www/logs/edu-api",
+      "encoding": "utf8",
+      "env": "prod",
+      "level": "INFO",
+      "consoleLevel": "INFO",
+      "disableConsoleAfterReady": true,
+      "outputJSON": false,
+      "buffer": true,
+      "appLogName": "edu-api-web.log",
+      "coreLogName": "egg-web.log",
+      "agentLogName": "egg-agent.log",
+      "errorLogName": "common-error.log",
+      "coreLogger": {},
+      "allowDebugAtProd": false,
+      "enablePerformanceTimer": false,
+      "type": "agent"
+    },
+    "httpclient": {
+      "enableDNSCache": false,
+      "dnsCacheLookupInterval": 10000,
+      "dnsCacheMaxLength": 1000,
+      "request": {
+        "timeout": 5000
+      },
+      "httpAgent": {
+        "keepAlive": true,
+        "freeSocketTimeout": 4000,
+        "maxSockets": 9007199254740991,
+        "maxFreeSockets": 256
+      },
+      "httpsAgent": {
+        "keepAlive": true,
+        "freeSocketTimeout": 4000,
+        "maxSockets": 9007199254740991,
+        "maxFreeSockets": 256
+      }
+    },
+    "meta": {
+      "enable": true,
+      "logging": false
+    },
+    "coreMiddleware": [
+      "meta",
+      "siteFile",
+      "notfound",
+      "bodyParser",
+      "overrideMethod"
+    ],
+    "workerStartTimeout": 600000,
+    "serverTimeout": null,
+    "cluster": {
+      "listen": {
+        "path": "",
+        "port": 7001,
+        "hostname": ""
+      }
+    },
+    "clusterClient": {
+      "maxWaitTime": 60000,
+      "responseTimeout": 60000
+    },
+    "onClientError": null,
+    "crypto": {
+      "secret": "<String len: 34>"
+    },
+    "middleware": [
+      "errorHandler",
+      "isLogin",
+      "checkSchool",
+      "checkStaffAuth",
+      "checkPlatformAuth",
+      "checkAppid",
+      "getCurrentUser",
+      "getCurrentUserAuth",
+      "checkBindPhone"
+    ],
+    "checkPlatformAuth": {
+      "match": [
+        "/platform"
+      ]
+    },
+    "checkAppid": {
+      "match": [
+        "/mobile",
+        "/pc"
+      ]
+    },
+    "getCurrentUser": {
+      "match": [
+        "/mobile/coupon",
+        "/mobile/post/list",
+        "/mobile/post/read",
+        "/mobile/book/read",
+        "/mobile/book/detail",
+        "/mobile/course/read",
+        "/mobile/column/read",
+        "/mobile/live/read",
+        "/mobile/testpaper/list",
+        "/pc/coupon",
+        "/pc/post/list",
+        "/pc/post/read",
+        "/pc/book/read",
+        "/pc/book/detail",
+        "/pc/course/read",
+        "/pc/column/read",
+        "/pc/live/read",
+        "/pc/testpaper/list",
+        "/pc/getinfo"
+      ]
+    },
+    "getCurrentUserAuth": {
+      "match": [
+        "/mobile/logout",
+        "/mobile/bind_mobile",
+        "/mobile/update_info",
+        "/mobile/update_password",
+        "/mobile/upload",
+        "/mobile/order/list",
+        "/mobile/user_fava",
+        "/mobile/user_coupon",
+        "/mobile/collect",
+        "/mobile/uncollect",
+        "/mobile/post/support",
+        "/mobile/post/unsupport",
+        "/mobile/post/reply",
+        "/mobile/post/delete",
+        "/mobile/mypost",
+        "/mobile/post/save",
+        "/mobile/mybook",
+        "/mobile/testpaper/read",
+        "/mobile/user_test/list",
+        "/mobile/user_test/save",
+        "/mobile/user_coupon/receive",
+        "/mobile/user_coupon/count",
+        "/mobile/order/save",
+        "/mobile/order/wxpay",
+        "/mobile/order/learn",
+        "/mobile/user_history/list",
+        "/mobile/user_history/update",
+        "/mobile/order/flashsale",
+        "/mobile/goods/read",
+        "/mobile/order/group",
+        "/mobile/live_comment/save",
+        "/pc/logout",
+        "/pc/bind_mobile",
+        "/pc/update_info",
+        "/pc/update_password",
+        "/pc/upload",
+        "/pc/order/list",
+        "/pc/user_fava",
+        "/pc/user_coupon",
+        "/pc/collect",
+        "/pc/uncollect",
+        "/pc/post/support",
+        "/pc/post/unsupport",
+        "/pc/post/reply",
+        "/pc/post/delete",
+        "/pc/mypost",
+        "/pc/post/save",
+        "/pc/mybook",
+        "/pc/testpaper/read",
+        "/pc/user_test/list",
+        "/pc/user_test/save",
+        "/pc/user_coupon/receive",
+        "/pc/user_coupon/count",
+        "/pc/order/save",
+        "/pc/order/wxpay",
+        "/pc/order/learn",
+        "/pc/user_history/list",
+        "/pc/user_history/update",
+        "/pc/order/flashsale",
+        "/pc/goods/read",
+        "/pc/order/group",
+        "/pc/live_comment/save"
+      ]
+    },
+    "checkBindPhone": {
+      "match": [
+        "/mobile/update_info",
+        "/mobile/update_password",
+        "/mobile/upload",
+        "/mobile/order/list",
+        "/mobile/user_fava",
+        "/mobile/user_coupon",
+        "/mobile/collect",
+        "/mobile/uncollect",
+        "/mobile/post/support",
+        "/mobile/post/unsupport",
+        "/mobile/post/reply",
+        "/mobile/post/delete",
+        "/mobile/mypost",
+        "/mobile/post/save",
+        "/mobile/mybook",
+        "/mobile/testpaper/read",
+        "/mobile/user_test/list",
+        "/mobile/user_test/save",
+        "/mobile/user_coupon/receive",
+        "/mobile/user_coupon/count",
+        "/mobile/order/save",
+        "/mobile/order/wxpay",
+        "/mobile/order/learn",
+        "/mobile/user_history/list",
+        "/mobile/user_history/update",
+        "/mobile/order/flashsale",
+        "/mobile/goods/read",
+        "/mobile/order/group",
+        "/mobile/live_comment/save",
+        "/pc/update_info",
+        "/pc/update_password",
+        "/pc/upload",
+        "/pc/order/list",
+        "/pc/user_fava",
+        "/pc/user_coupon",
+        "/pc/collect",
+        "/pc/uncollect",
+        "/pc/post/support",
+        "/pc/post/unsupport",
+        "/pc/post/reply",
+        "/pc/post/delete",
+        "/pc/mypost",
+        "/pc/post/save",
+        "/pc/mybook",
+        "/pc/testpaper/read",
+        "/pc/user_test/list",
+        "/pc/user_test/save",
+        "/pc/user_coupon/receive",
+        "/pc/user_coupon/count",
+        "/pc/order/save",
+        "/pc/order/wxpay",
+        "/pc/order/learn",
+        "/pc/user_history/list",
+        "/pc/user_history/update",
+        "/pc/order/flashsale",
+        "/pc/goods/read",
+        "/pc/order/group",
+        "/pc/live_comment/save"
+      ]
+    },
+    "isLogin": {
+      "match": [
+        "/admin",
+        "/platform"
+      ]
+    },
+    "checkSchool": {
+      "match": [
+        "/admin/s/"
+      ]
+    },
+    "checkStaffAuth": {
+      "match": [
+        "/admin/s/"
+      ]
+    },
+    "tencentVod": {
+      "secret_id": "<String len: 36>",
+      "secret_key": "<String len: 32>",
+      "vodSubAppId": 1500000131
+    },
+    "Queue": {
+      "redis": {
+        "port": 6379,
+        "host": "127.0.0.1",
+        "db": 3,
+        "password": null
+      },
+      "defaultJobOptions": {
+        "attempts": 1,
+        "removeOnComplete": true,
+        "backoff": false,
+        "delay": 0
+      },
+      "limiter": {
+        "max": 200000,
+        "duration": 1000
+      },
+      "settings": {
+        "maxStalledCount": 1,
+        "guardInterval": 1,
+        "retryProcessDelay": 500
+      }
+    },
+    "aliSMS": {
+      "isopen": false,
+      "expire": 60,
+      "accessKeyId": "LTAI5tLbaKpqsqByS2E3hmCR",
+      "accessSecret": "<String len: 30>",
+      "regionId": "cn-hangzhou",
+      "endpoint": "https://dysmsapi.aliyuncs.com",
+      "version": "2017-05-25",
+      "SignName": "易仿帝国",
+      "TemplateCode": "SMS_164278467"
+    },
+    "webUrl": "http://demonuxtapi.dishait.cn",
+    "mpWeixin": {
+      "appid": "wxb1f305de99c0fe32",
+      "secret": "<String len: 32>"
+    },
+    "H5Weixin": {
+      "appid": "wxf0d98abcc66aab61",
+      "secret": "<String len: 32>"
+    },
+    "mediaServerBaseUrl": "demonuxtapi.dishait.cn",
+    "mediaServer": {
+      "rtmp": {
+        "port": 23484,
+        "chunk_size": 60000,
+        "gop_cache": true,
+        "ping": 30,
+        "ping_timeout": 60
+      },
+      "http": {
+        "port": 23485,
+        "allow_origin": "*"
+      },
+      "auth": {
+        "play": true,
+        "publish": true,
+        "secret": "<String len: 23>"
+      },
+      "relay": {
+        "ffmpeg": "/www/wwwroot/ceshi8.dishaxy.com/soft/linux/ffmpeg",
+        "tasks": [
+          {
+            "app": "live",
+            "mode": "static",
+            "edge": "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4",
+            "name": "00688822abbe4a1df141"
+          }
+        ]
+      }
+    },
+    "coreMiddlewares": "~config~coreMiddleware",
+    "appMiddlewares": "~config~middleware",
+    "appMiddleware": "~config~middleware"
+  },
+  "plugins": {
+    "onerror": {
+      "enable": true,
+      "package": "egg-onerror",
+      "name": "onerror",
+      "dependencies": [],
+      "optionalDependencies": [
+        "jsonp"
+      ],
+      "env": [],
+      "from": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/plugin.js",
+      "path": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-onerror",
+      "version": "2.1.0"
+    },
+    "session": {
+      "enable": true,
+      "package": "egg-session",
+      "name": "session",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/plugin.js",
+      "path": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-session",
+      "version": "3.3.0"
+    },
+    "i18n": {
+      "enable": true,
+      "package": "egg-i18n",
+      "name": "i18n",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/plugin.js",
+      "path": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-i18n",
+      "version": "2.1.1"
+    },
+    "watcher": {
+      "enable": true,
+      "package": "egg-watcher",
+      "name": "watcher",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/plugin.js",
+      "path": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-watcher",
+      "version": "3.1.1"
+    },
+    "multipart": {
+      "enable": true,
+      "package": "egg-multipart",
+      "name": "multipart",
+      "dependencies": [],
+      "optionalDependencies": [
+        "schedule"
+      ],
+      "env": [],
+      "from": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/plugin.js",
+      "path": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-multipart",
+      "version": "2.13.1"
+    },
+    "security": {
+      "enable": true,
+      "package": "egg-security",
+      "name": "security",
+      "dependencies": [],
+      "optionalDependencies": [
+        "session"
+      ],
+      "env": [],
+      "from": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/plugin.js",
+      "path": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-security",
+      "version": "2.10.1"
+    },
+    "development": {
+      "enable": false,
+      "package": "egg-development",
+      "name": "development",
+      "dependencies": [
+        "watcher"
+      ],
+      "optionalDependencies": [],
+      "env": [
+        "local"
+      ],
+      "from": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/plugin.js",
+      "path": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-development",
+      "version": "2.7.0"
+    },
+    "logrotator": {
+      "enable": true,
+      "package": "egg-logrotator",
+      "name": "logrotator",
+      "dependencies": [
+        "schedule"
+      ],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/plugin.js",
+      "path": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-logrotator",
+      "version": "3.1.0"
+    },
+    "schedule": {
+      "enable": true,
+      "package": "egg-schedule",
+      "name": "schedule",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/plugin.js",
+      "path": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-schedule",
+      "version": "3.6.6"
+    },
+    "static": {
+      "enable": true,
+      "package": "egg-static",
+      "name": "static",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/plugin.js",
+      "path": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-static",
+      "version": "2.2.0"
+    },
+    "jsonp": {
+      "enable": true,
+      "package": "egg-jsonp",
+      "name": "jsonp",
+      "dependencies": [],
+      "optionalDependencies": [
+        "security"
+      ],
+      "env": [],
+      "from": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/plugin.js",
+      "path": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-jsonp",
+      "version": "2.0.0"
+    },
+    "view": {
+      "enable": true,
+      "package": "egg-view",
+      "name": "view",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg/config/plugin.js",
+      "path": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-view",
+      "version": "2.1.3"
+    },
+    "cors": {
+      "enable": true,
+      "package": "egg-cors",
+      "name": "cors",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/www/wwwroot/ceshi8.dishaxy.com/config/plugin.js",
+      "path": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-cors",
+      "version": "2.2.3"
+    },
+    "sequelize": {
+      "enable": true,
+      "package": "egg-sequelize",
+      "name": "sequelize",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/www/wwwroot/ceshi8.dishaxy.com/config/plugin.js",
+      "path": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-sequelize",
+      "version": "6.0.0"
+    },
+    "jwt": {
+      "enable": true,
+      "package": "egg-jwt",
+      "name": "jwt",
+      "dependencies": [],
+      "optionalDependencies": [
+        "onerror"
+      ],
+      "env": [],
+      "from": "/www/wwwroot/ceshi8.dishaxy.com/config/plugin.js",
+      "path": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-jwt",
+      "version": "3.1.7"
+    },
+    "redis": {
+      "enable": true,
+      "package": "egg-redis",
+      "name": "redis",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/www/wwwroot/ceshi8.dishaxy.com/config/plugin.js",
+      "path": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-redis",
+      "version": "2.4.0"
+    },
+    "valparams": {
+      "enable": true,
+      "package": "egg-valparams",
+      "name": "valparams",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/www/wwwroot/ceshi8.dishaxy.com/config/plugin.js",
+      "path": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-valparams",
+      "version": "1.4.5"
+    },
+    "oss": {
+      "enable": true,
+      "package": "egg-oss",
+      "name": "oss",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/www/wwwroot/ceshi8.dishaxy.com/config/plugin.js",
+      "path": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-oss",
+      "version": "2.0.0"
+    },
+    "tenpay": {
+      "enable": true,
+      "package": "egg-tenpay",
+      "name": "tenpay",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/www/wwwroot/ceshi8.dishaxy.com/config/plugin.js",
+      "path": "/www/wwwroot/ceshi8.dishaxy.com/node_modules/egg-tenpay",
+      "version": "1.0.1"
+    }
+  },
+  "appInfo": {
+    "name": "edu-api",
+    "baseDir": "/www/wwwroot/ceshi8.dishaxy.com",
+    "env": "prod",
+    "HOME": "/home/www",
+    "pkg": {
+      "name": "edu-api",
+      "version": "1.0.0",
+      "description": "",
+      "private": true,
+      "egg": {
+        "declarations": true
+      },
+      "dependencies": {
+        "@alicloud/pop-core": "^1.7.10",
+        "ali-oss": "^6.15.2",
+        "await-stream-ready": "^1.0.1",
+        "bull": "^3.29.1",
+        "crypto": "^1.0.1",
+        "dayjs": "^1.10.4",
+        "egg": "^2.15.1",
+        "egg-cors": "^2.2.3",
+        "egg-jwt": "^3.1.7",
+        "egg-oss": "^2.0.0",
+        "egg-redis": "^2.4.0",
+        "egg-scripts": "^2.11.0",
+        "egg-sequelize": "^6.0.0",
+        "egg-tenpay": "^1.0.1",
+        "egg-valparams": "^1.4.3",
+        "md5": "^2.3.0",
+        "mysql2": "^2.2.5",
+        "node-media-server": "^2.3.8",
+        "querystring": "^0.2.1",
+        "stream-wormhole": "^1.1.0",
+        "xlsx": "^0.16.9"
+      },
+      "devDependencies": {
+        "autod": "^3.0.1",
+        "autod-egg": "^1.1.0",
+        "egg-bin": "^4.11.0",
+        "egg-ci": "^1.11.0",
+        "egg-mock": "^3.21.0",
+        "eslint": "^5.13.0",
+        "eslint-config-egg": "^7.1.0",
+        "sequelize-cli": "^6.2.0"
+      },
+      "engines": {
+        "node": ">=10.0.0"
+      },
+      "scripts": {
+        "start": "egg-scripts start --daemon --title=egg-server-edu-api --port=7003",
+        "stop": "egg-scripts stop --title=egg-server-edu-api",
+        "dev": "egg-bin dev --port=7003",
+        "debug": "egg-bin debug",
+        "test": "npm run lint -- --fix && npm run test-local",
+        "test-local": "egg-bin test",
+        "cov": "egg-bin cov",
+        "lint": "eslint .",
+        "ci": "npm run lint && npm run cov",
+        "autod": "autod"
+      },
+      "ci": {
+        "version": "10"
+      },
+      "repository": {
+        "type": "git",
+        "url": ""
+      },
+      "author": "",
+      "license": "MIT"
+    },
+    "root": "/home/www"
+  }
+}
