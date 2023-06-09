@@ -14,9 +14,8 @@ import chromadb
 from chromadb.config import Settings
 vectorstore_client = chromadb.Client(Settings(
     chroma_db_impl="duckdb+parquet",
-    #persist_directory="/path/to/persist/directory" # Optional, defaults to .chromadb/ in the current directory
+    persist_directory="vectorstore" # Optional, defaults to .chromadb/ in the current directory
 ))
-vectorstore_client = chromadb.Client()
 
 def init_db():
     # import all modules here that might define models so that
