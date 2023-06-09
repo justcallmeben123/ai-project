@@ -3,9 +3,10 @@ from flask_cors import CORS
 from flask_restful import Api
 from flask_restful import Resource
 
-from modules.llm_modules import llm_api
-from modules.llm_modules import llm_access_token
+from modules.llm_modules import llm_middleware, llm_access_token
 from modules.helper import response_generator
+
+from modules.database import llm_conversation, database_base
 
 app = Flask(__name__)
 CORS(app)
@@ -43,37 +44,46 @@ class LLM_Caller(Resource):
     def get(self):
         token = request.headers.get("token")
         data = request.args
-        id = data.get("id")
+        conv_id = data.get("id")
 
         if llm_access_token.check_llm_access_token(token) is None:
-            return response_generator.fail("Token 无效")
-        if id>len(llm_conversation):
-            return response_generator.fail("无对话")
-        if id == 0 :
-            id = len(llm_conversation)
-        else:
-            id = id-1
+            return response_generator.fail("Token 无效", code=-1)
 
-        return response_generator.ok({"id":id+1, "conversation":llm_conversation[id]})
+        result = llm_middleware.get_conversation(conv_id)
+        if result is None:
+            return response_generator.fail("无对话", code=-2)
+
+        return response_generator.ok(result.to_json())
 
     def post(self):
         token = request.headers.get("token")
-        data = request.get_json()
-        id = data.get("id")
-        text = data.get("text")
-
         if llm_access_token.check_llm_access_token(token) is None:
-            return response_generator.fail("Token 无效")
-        if id>len(llm_conversation):
-            return response_generator.fail("无对话")
-        if id == 0 :
-            id = len(llm_conversation)
-            llm_conversation.append([])
-        else:
-            id = id-1
-        llm_conversation[id].append(llm_api.llm_asking(text))
+            return response_generator.fail("Token 无效", code=-1)
 
-        return response_generator.ok({"id":id+1,"conversation":llm_conversation[id]})
+        data = request.get_json()
+        type = data.get("type")
+        collection_name = data.get("collection_name")
+        if type == 'new':
+            text = data.get("text")
+            conv = llm_middleware.Conversation(llm_middleware.new_conversation(collection_name, text))
+            conv.requests(text)
+            conv.update()
+            return response_generator.ok(conv.to_json())
+        elif type == 'top_ask':
+            top_asks = [x.to_json() for x in llm_middleware.top_ask(collection_name)]
+            return response_generator.ok(top_asks)
+        elif type == 'top_close':
+            text = data.get("text")
+            top_closes = [x.to_json() for x in llm_middleware.question_lookup(collection_name,text)]
+            for c in top_closes: c.frequency()
+            return response_generator.ok(top_closes)
+        elif type == 'like':
+            return response_generator.ok(llm_middleware.like())
+        elif type == 'dislike':
+            return response_generator.ok(llm_middleware.dislike())
+        else:
+            return response_generator.fail("type 无效", code=-2)
+
 
 
 api.add_resource(Hello, '/hello')
@@ -82,4 +92,6 @@ api.add_resource(LLM_Access_Checker, '/accllm/token')
 
 
 if __name__ == "__main__":
+    database_base.init_db()
+
     app.run(host='127.0.0.1', port=8010)
