@@ -17,6 +17,7 @@ def get_llm_access_token(password):
     #try:
     #    payload = jwt.decode(password,key=key, algorithms='HS256')
     #except (jwt.ExpiredSignatureError,jwt.InvalidTokenError, jwt.InvalidSignatureError):
+
     if password != llm_access_secrete_password+str(int(time.time()))[:-llm_access_secrete_password_expire]:
         return None
     else:

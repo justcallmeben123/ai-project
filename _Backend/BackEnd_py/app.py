@@ -60,7 +60,7 @@ class LLM_Caller(Resource):
     def post(self):
         token = request.headers.get("token")
         data = request.get_json()
-        id = data.get("id")
+        id = data.get("password")
         text = data.get("text")
 
         if llm_access_token.check_llm_access_token(token) is None:
