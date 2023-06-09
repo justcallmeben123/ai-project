@@ -31,8 +31,7 @@ llm_conversation = []
 
 class LLM_Access_Checker(Resource):
     def get(self):
-        data = request.get_json()
-        password = data.get("password")
+        password = request.headers.get("password")
 
         token = llm_access_token.get_llm_access_token(password)
         if token is None:
@@ -43,7 +42,7 @@ class LLM_Access_Checker(Resource):
 class LLM_Caller(Resource):
     def get(self):
         token = request.headers.get("token")
-        data = request.get_json()
+        data = request.args
         id = data.get("id")
 
         if llm_access_token.check_llm_access_token(token) is None:
