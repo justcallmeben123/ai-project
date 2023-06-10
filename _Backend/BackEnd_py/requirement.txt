@@ -6,3 +6,4 @@ chromadb
 sqlalchemy
 mysqlclient
 openai
+configparser

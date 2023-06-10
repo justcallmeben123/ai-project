@@ -1,8 +1,18 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
+from modules.helper.config import config
 
-engine = create_engine('mysql://juzizhou:juzizhou@localhost:3306/Juzizhou_Database', convert_unicode=True)
+user = config['sql.connect']['user']    #sql用户名
+password = config['sql.connect']['password'] #sql密码
+host = config['sql.connect']['host']    #sql host
+port = config['sql.connect']['port']      #sql端口
+database_name = config['sql.connect']['database_name'] #数据库名称
+
+
+print('mysql://'+user+':'+password+'@'+host+':'+port+'/'+database_name)
+
+engine = create_engine('mysql://'+user+':'+password+'@'+host+':'+port+'/'+database_name, convert_unicode=True)
 db_session = scoped_session(sessionmaker(autocommit=False,
                                          autoflush=False,
                                          bind=engine))
