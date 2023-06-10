@@ -2,6 +2,14 @@
 juzhou project
 =============
 
+
+Api接口文档地址
+-------------
+python后端api,目前完成llm部分
+https://docs.google.com/document/d/1FEKRZ-wS0Um6QFQ-tgMc1yPgHXkgOfgYixglhtTBz_A/edit
+网页模板的api
+http://dishaxy.dishait.cn/nuxt3#d900f0d5-52cc-4c96-b1a8-6200a2e26bf2
+
 前端安装
 -------------
 1. 安装node js
@@ -30,6 +38,23 @@ yarn run dev -o
 ```
 直接打开， 或者点击端口http://localhost:3000/ 
 
+SQL
+-------------
+安装SQL,并根据自己的SQL环境设置config.ini
+示例:
+```
+[sql.connect]
+#sql用户名
+user = juzizhou
+#sql密码
+password = juzizhou
+#sql host
+host = localhost
+#sql端口
+port = 3306
+#数据库名称
+database_name = Juzizhou_Database
+```
 
 后端文件
 -------------
@@ -55,7 +80,3 @@ git pull
 ```
 git push 
 ```
-
-Api接口文档地址
--------------
-http://dishaxy.dishait.cn/nuxt3#d900f0d5-52cc-4c96-b1a8-6200a2e26bf2
