@@ -75,7 +75,7 @@ class LLM_Caller(Resource):
         elif call_type == 'top_close':
             text = data.get("text")
             top_closes = [x.to_json() for x in llm_middleware.question_lookup(collection_name,text)]
-            for c in top_closes: c.frequency()
+            for c in top_closes: c.add_frequency()
             return response_generator.ok(top_closes)
         elif call_type == 'like':
             conv_id = data.get("id")
