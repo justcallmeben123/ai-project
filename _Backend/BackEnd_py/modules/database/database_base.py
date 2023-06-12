@@ -10,6 +10,8 @@ database_name = config['sql.connect']['database_name'] #数据库名称
 
 
 db_uri = 'mysql://'+user+':'+password+'@'+host+':'+port+'/'+database_name
+if config['sql.connect']['not_use_mySQL'] == '0':
+    db_uri = "sqlite:///project.db"
 db = SQLAlchemy()
 
 

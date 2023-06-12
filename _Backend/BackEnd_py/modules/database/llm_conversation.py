@@ -13,7 +13,7 @@ default_prompt_setting = {
 }
 
 class DObject_llm_conversation(db.Model):
-    __tablename__ = 'test___'
+    __tablename__ = 'test_'
     id = db.Column(db.Integer, primary_key=True)
     collection_name = db.Column(db.String(50)) #course id
     first_question = db.Column(db.Text)
@@ -31,16 +31,17 @@ class DObject_llm_conversation(db.Model):
         self.evaluation = 0
         self.frequency = 1
 
+        collection = vectorstore_client.get_or_create_collection(name=collection_name,
+                                                                               embedding_function=emb_fn)
         db.session.add(self)
         db.session.commit()
 
-        collection = vectorstore_client.get_or_create_collection(name=collection_name,
-                                                                               embedding_function=emb_fn)
         collection.add(
             documents=[first_question],
             metadatas=[{"id":self.id }],
             ids=[str(self.id)]
         )
+        vectorstore_client.persist()
 
     def update_context(self,context):
         self.conversation_context = json.dumps(context)
@@ -51,7 +52,7 @@ class DObject_llm_conversation(db.Model):
 
     def like(self):
         self.evaluation += 1
-        database_base.db_session.commit()
+        db.session.commit()
         return self.evaluation
 
     def dislike(self):
@@ -83,7 +84,7 @@ class DObject_llm_conversation(db.Model):
 
 question_lookup_threshold = 1
 def question_lookup(collection_name,first_question,k = 3):
-    collection = database_base.vectorstore_client.get_collection(name=collection_name)
+    collection = vectorstore_client.get_collection(name=collection_name)
     result = collection.query(query_texts=[first_question], n_results=k)
     ids = result['ids'][0]
     distances = result['distances'][0]
@@ -99,5 +100,4 @@ def id_lookup(conv_id):
 
 
 def top_ask(collection_name,k=3):
-    return DObject_llm_conversation.query.filter(DObject_llm_conversation.evaluation >= 0).order_by('frequency')[:k]
-
+    return DObject_llm_conversation.query.filter_by(collection_name=collection_name).filter(DObject_llm_conversation.evaluation >= 0).order_by(DObject_llm_conversation.frequency.desc())[:k]

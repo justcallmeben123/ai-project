@@ -49,8 +49,8 @@ class LLM_Access_Handler(Resource):
         if llm_access_token.check_llm_access_token(token) is None:
             return response_generator.fail("Token 无效", code=-1)
 
+        data = request.args
         if call_type == 'conversation':
-            data = request.args
             conv_id = data.get("id")
 
             result = llm_middleware.get_conversation(conv_id)
@@ -58,6 +58,17 @@ class LLM_Access_Handler(Resource):
                 return response_generator.fail("无对话", code=-2)
 
             return response_generator.ok(result.to_json())
+        elif call_type == 'top_ask':
+            collection_name = data.get("collection_name")
+            top_asks = [x.to_json() for x in llm_middleware.top_ask(collection_name)]
+            return response_generator.ok(top_asks)
+        elif call_type == 'top_close':
+            text = data.get("text")
+            collection_name = data.get("collection_name")
+            top_closes = llm_middleware.question_lookup(collection_name, text)
+            for c in top_closes: c.add_frequency()
+            top_closes = [x.to_json() for x in top_closes]
+            return response_generator.ok(top_closes)
 
         return response_generator.fail("unknown call type", code=-10)
 
@@ -75,16 +86,6 @@ class LLM_Access_Handler(Resource):
             conv.requests(text)
             conv.update_context()
             return response_generator.ok(conv.to_json())
-        elif call_type == 'top_ask':
-            collection_name = data.get("collection_name")
-            top_asks = [x.to_json() for x in llm_middleware.top_ask(collection_name)]
-            return response_generator.ok(top_asks)
-        elif call_type == 'top_close':
-            text = data.get("text")
-            collection_name = data.get("collection_name")
-            top_closes = [x.to_json() for x in llm_middleware.question_lookup(collection_name,text)]
-            for c in top_closes: c.add_frequency()
-            return response_generator.ok(top_closes)
         elif call_type == 'like':
             conv_id = data.get("id")
             evl = llm_middleware.like(conv_id)
