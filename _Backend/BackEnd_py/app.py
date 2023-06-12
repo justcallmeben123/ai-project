@@ -104,7 +104,6 @@ api.add_resource(LLM_Access_Handler, '/accllm/<string:call_type>')
 
 
 if __name__ == "__main__":
-    if config['sql.connect']['use_sql'] != '0':
-        database_base.init_db()
+    database_base.init_db()
 
     app.run(host='127.0.0.1', port=8010)
