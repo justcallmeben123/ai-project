@@ -5,8 +5,7 @@ from flask_restful import Resource
 
 from modules.llm_modules import llm_middleware, llm_access_token
 from modules.helper import response_generator
-
-from modules.database import llm_conversation, database_base
+from modules.database import database_base
 
 from modules.helper.config import config
 
@@ -14,6 +13,9 @@ app = Flask(__name__)
 CORS(app)
 api = Api(app)
 
+@app.teardown_appcontext
+def shutdown_session(exception=None):
+    database_base.db_session.remove()
 
 @app.route('/', methods=["GET"])
 def index():
@@ -106,4 +108,4 @@ api.add_resource(LLM_Access_Handler, '/accllm/<string:call_type>')
 if __name__ == "__main__":
     database_base.init_db()
 
-    app.run(host='127.0.0.1', port=8010)
+    app.run(host='127.0.0.1', port=18010)

@@ -12,7 +12,8 @@ database_name = config['sql.connect']['database_name'] #数据库名称
 
 print('mysql://'+user+':'+password+'@'+host+':'+port+'/'+database_name)
 
-engine = create_engine('mysql://'+user+':'+password+'@'+host+':'+port+'/'+database_name, convert_unicode=True)
+engine = create_engine('mysql://'+user+':'+password+'@'+host+':'+port+'/'+database_name,
+                       echo=True)
 db_session = scoped_session(sessionmaker(autocommit=False,
                                          autoflush=False,
                                          bind=engine))
