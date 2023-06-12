@@ -1,9 +1,9 @@
+chromadb
+mysqlclient
 flask
 flask_cors
 flask_restful
+flask-sqlalchemy
 PyJWT
-chromadb
-sqlalchemy
-mysqlclient
 openai
 configparser

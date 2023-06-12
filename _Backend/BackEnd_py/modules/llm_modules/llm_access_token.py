@@ -49,6 +49,10 @@ def check_llm_access_token(token: str):
         payload = jwt.decode(token, key=llm_access_secrete_key, algorithms='HS256')
     except (jwt.ExpiredSignatureError, jwt.InvalidTokenError, jwt.InvalidSignatureError):
         return None
+    except (TypeError):
+        print("token TypeError:")
+        print(token)
+        return None
     else:
         if payload['expire'] < time.time():
             return None

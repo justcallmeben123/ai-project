@@ -13,9 +13,6 @@ app = Flask(__name__)
 CORS(app)
 api = Api(app)
 
-@app.teardown_appcontext
-def shutdown_session(exception=None):
-    database_base.db_session.remove()
 
 @app.route('/', methods=["GET"])
 def index():
@@ -90,10 +87,15 @@ class LLM_Access_Handler(Resource):
             return response_generator.ok(top_closes)
         elif call_type == 'like':
             conv_id = data.get("id")
-            return response_generator.ok(llm_middleware.like(conv_id))
+            evl = llm_middleware.like(conv_id)
+            if evl is None:
+                return response_generator.fail("id无效", code=-2)
+            return response_generator.ok()
         elif call_type == 'dislike':
             conv_id = data.get("id")
-            return response_generator.ok(llm_middleware.dislike(conv_id))
+            evl = llm_middleware.like(conv_id)
+            if evl is None:
+                return response_generator.fail("id无效", code=-2)
 
 
         return response_generator.fail("unknown call type", code=-10)
@@ -106,6 +108,6 @@ api.add_resource(LLM_Access_Handler, '/accllm/<string:call_type>')
 
 
 if __name__ == "__main__":
-    database_base.init_db()
+    database_base.init_db(app)
 
     app.run(host='127.0.0.1', port=18010)

@@ -2,7 +2,7 @@ import json
 
 import numpy as np
 from sqlalchemy import Column, Integer, String,Text,JSON
-from modules.database import database_base
+from modules.database.database_base import vectorstore_client, db
 from chromadb.utils import embedding_functions
 
 emb_fn = embedding_functions.DefaultEmbeddingFunction()
@@ -12,15 +12,15 @@ default_prompt_setting = {
     'extra_source':"",
 }
 
-class DObject_llm_conversation(database_base.Base):
+class DObject_llm_conversation(db.Model):
     __tablename__ = 'test___'
-    id = Column(Integer, primary_key=True)
-    collection_name = Column(String(50)) #course id
-    first_question = Column(Text)
-    prompt_setting = Column(JSON)
-    conversation_context = Column(Text)
-    evaluation = Column(Integer)
-    frequency = Column(Integer)
+    id = db.Column(db.Integer, primary_key=True)
+    collection_name = db.Column(db.String(50)) #course id
+    first_question = db.Column(db.Text)
+    prompt_setting = db.Column(db.JSON)
+    conversation_context = db.Column(db.Text)
+    evaluation = db.Column(db.Integer)
+    frequency = db.Column(db.Integer)
 
     def __init__(self, collection_name, first_question, initial_prompt=None):
         self.collection_name = collection_name
@@ -31,10 +31,10 @@ class DObject_llm_conversation(database_base.Base):
         self.evaluation = 0
         self.frequency = 1
 
-        database_base.db_session.add(self)
-        database_base.db_session.commit()
+        db.session.add(self)
+        db.session.commit()
 
-        collection = database_base.vectorstore_client.get_or_create_collection(name=collection_name,
+        collection = vectorstore_client.get_or_create_collection(name=collection_name,
                                                                                embedding_function=emb_fn)
         collection.add(
             documents=[first_question],
@@ -44,7 +44,7 @@ class DObject_llm_conversation(database_base.Base):
 
     def update_context(self,context):
         self.conversation_context = json.dumps(context)
-        database_base.db_session.commit()
+        db.session.commit()
 
     def load_context(self):
         return json.loads(self.conversation_context)
@@ -57,14 +57,14 @@ class DObject_llm_conversation(database_base.Base):
     def dislike(self):
         self.evaluation -= 1
         if self.evaluation <0:
-            collection = database_base.vectorstore_client.get_collection(name=self.collection_name)
+            collection = vectorstore_client.get_collection(name=self.collection_name)
             collection.delete(ids=[str(self.id)])
-        database_base.db_session.commit()
+        db.session.commit()
         return self.evaluation
 
     def add_frequency(self):
         self.frequency+=1
-        database_base.db_session.commit()
+        db.session.commit()
         return self.frequency
 
     def __repr__(self):

@@ -40,10 +40,12 @@ def get_conversation(conv_id):
 
 
 def like(conv_id):
+    if llm_conversation.id_lookup(conv_id) is None: return None
     return llm_conversation.id_lookup(conv_id).like()
 
 
 def dislike(conv_id):
+    if llm_conversation.id_lookup(conv_id) is None: return None
     return llm_conversation.id_lookup(conv_id).dislike()
 
 

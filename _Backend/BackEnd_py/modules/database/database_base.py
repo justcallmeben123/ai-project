@@ -1,6 +1,5 @@
-from sqlalchemy import create_engine
-from sqlalchemy.orm import scoped_session, sessionmaker
-from sqlalchemy.ext.declarative import declarative_base
+
+from flask_sqlalchemy import SQLAlchemy
 from modules.helper.config import config
 
 user = config['sql.connect']['user']    #sql用户名
@@ -10,15 +9,9 @@ port = config['sql.connect']['port']      #sql端口
 database_name = config['sql.connect']['database_name'] #数据库名称
 
 
-print('mysql://'+user+':'+password+'@'+host+':'+port+'/'+database_name)
+db_uri = 'mysql://'+user+':'+password+'@'+host+':'+port+'/'+database_name
+db = SQLAlchemy()
 
-engine = create_engine('mysql://'+user+':'+password+'@'+host+':'+port+'/'+database_name,
-                       echo=True)
-db_session = scoped_session(sessionmaker(autocommit=False,
-                                         autoflush=False,
-                                         bind=engine))
-Base = declarative_base()
-Base.query = db_session.query_property()
 
 #向量数据库,chromadb 2GBRAM
 import chromadb
@@ -28,9 +21,15 @@ vectorstore_client = chromadb.Client(Settings(
     persist_directory="vectorstore" # Optional, defaults to .chromadb/ in the current directory
 ))
 
-def init_db():
+def init_db(app):
     # import all modules here that might define models so that
     # they will be registered properly on the metadata.  Otherwise
     # you will have to import them first before calling init_db()
     import modules.database.llm_conversation
-    Base.metadata.create_all(bind=engine)
+
+    # configure the SQLite database, relative to the app instance folder
+    app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///project.db"
+    # initialize the app with the extension
+    db.init_app(app)
+    with app.app_context():
+        db.create_all()
