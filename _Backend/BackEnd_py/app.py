@@ -8,6 +8,8 @@ from modules.helper import response_generator
 
 from modules.database import llm_conversation, database_base
 
+from modules.helper.config import config
+
 app = Flask(__name__)
 CORS(app)
 api = Api(app)
@@ -100,7 +102,9 @@ api.add_resource(Hello, '/hello')
 api.add_resource(LLM_Access_Handler, '/accllm/<string:call_type>')
 
 
+
 if __name__ == "__main__":
-    database_base.init_db()
+    if config['sql.connect']['use_sql'] != '0':
+        database_base.init_db()
 
     app.run(host='127.0.0.1', port=8010)
